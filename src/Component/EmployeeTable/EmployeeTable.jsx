@@ -69,9 +69,9 @@ function EmployeeTable({ onNavItemClick }) {
                         </tr>
                     </thead>
                     <tbody>
-                        {filteredData.map((item) => (
+                        {filteredData.map((item , index) => (
                             <tr key={item.id} className={Css.tbody}>
-                                <td>{item.id}</td>
+                                <td>{index + 1}</td>
                                 <td>{item.Name}</td>
                                 <td>{item.Number}</td>
                                 <td>{item.Email}</td>

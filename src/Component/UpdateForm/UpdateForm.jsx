@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import Css from './UpdateForm.module.css';
 import { useNavigate, useParams } from 'react-router-dom';
