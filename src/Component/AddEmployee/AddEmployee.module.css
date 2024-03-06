@@ -1,14 +1,45 @@
 .FormWrapper{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 80%;
-    gap: 50px;
 }
 
-
 .Form{
+    width: 550px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #8EACCD;
+}
+
+.Form input{
+    border-radius: 5px;
+}
+
+.btn{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn button{
+    height: 40px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.btn button:hover{
+    background-color: #8EACCD;
+    border: 2px solid white;
+    color: white;
+}
+
+.error{
+    color: red;
 }

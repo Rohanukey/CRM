@@ -1,19 +1,8 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-// eslint-disable-next-line no-unused-vars
-import React from 'react'
-import { useState ,useEffect } from 'react'
-import Css from "./AddEmployee.module.css"
-// eslint-disable-next-line no-unused-vars
+import React, { useState } from 'react';
+import Css from './AddEmployee.module.css';
 import axios from 'axios';
 
-
-export default function AddEmployee({onNavItemClick}) {
-
-    const handleClick = (component) => {
-        onNavItemClick(component);
-      };
-
+export default function AddEmployee({ onNavItemClick }) {
     const [inputs, setInputs] = useState({
         Name: '',
         UserName: '',
@@ -21,118 +10,132 @@ export default function AddEmployee({onNavItemClick}) {
         Email: '',
         Password: '',
         Address: '',
-    })
+    });
+    const [errors, setErrors] = useState({});
+
+    const handleClick = (component) => {
+        onNavItemClick(component);
+    };
+
+    const validateForm = () => {
+        const errors = {};
+        if (!inputs.Name.trim()) {
+            errors.Name = 'Name is required';
+        }
+        if (!inputs.UserName.trim()) {
+            errors.UserName = 'Username is required';
+        }
+        if (!inputs.Number.trim()) {
+            errors.Number = 'Number is required';
+        } else if (!/^\d{10}$/.test(inputs.Number)) {
+            errors.Number = 'Number must be 10 digits';
+        }
+        if (!inputs.Email.trim()) {
+            errors.Email = 'Email is required';
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputs.Email)) {
+            errors.Email = 'Invalid email address';
+        }
+        if (!inputs.Password.trim()) {
+            errors.Password = 'Password is required';
+        }
+        if (!inputs.Address.trim()) {
+            errors.Address = 'Address is required';
+        }
+        setErrors(errors);
+        return Object.keys(errors).length === 0;
+    };
 
     const onhandleChange = (event) => {
-        const name = event.target.name
-        const value = event.target.value
-        setInputs((values) => ({ ...values, [name]: value }))
-    }
+        const { name, value } = event.target;
+        setInputs((values) => ({ ...values, [name]: value }));
+        // Clear the error message when the user starts typing again
+        setErrors((prevErrors) => ({ ...prevErrors, [name]: '' }));
+    };
 
-    const onformSubmit = (event) => {
-
-        event.preventDefault()
-        const pre = JSON.parse(localStorage.getItem("EmployeeData")) || []
-        const current = [...pre , inputs]
-        console.log(current)
-
-        localStorage.setItem("EmployeeData", JSON.stringify(current))
-
-        const match =  pre.some((user)=>{
-            return user.email === inputs.email 
-        })
-
-        console.log(match)
-        handleClick('EmployeeTable')
-        AddData()
-
-    }
-
-    const url = "http://localhost:3000/user"
-    const [apidata, setApidata] = useState([])
-
-    useEffect(() => {
-
-
-        axios.get(url)
-            .then((response) => setApidata(response.data))
-        
-        console.log(apidata)
-        
-
-    }, [])
-
-    const AddData = () => {
-        axios.post(url, inputs)
-        .then(response => {
-            console.log('Data successfully posted:', response.data);
-            // Optionally, you can update state or perform other actions upon successful post
-        })
-        .catch(error => {
-            console.error('Error posting data:', error);
-            // Optionally, you can handle errors here, e.g., display an error message to the user
-        });
-    }
+    const onformSubmit = async (event) => {
+        event.preventDefault();
+        if (validateForm()) {
+            try {
+                await axios.post('http://localhost:3000/user', inputs);
+                console.log('Data successfully posted');
+                handleClick('EmployeeTable');
+            } catch (error) {
+                console.error('Error posting data:', error);
+                // Handle error, e.g., display an error message to the user
+            }
+        }
+    };
 
     return (
-        <>  
+        <>
             <div className={Css.FormWrapper}>
-            <h1>Add New Employee</h1>
-            <form className={Css.Form} onSubmit={onformSubmit}> 
-                <label>Employee Name</label>
-                <input
-                    type="text"
-                    name='Name'
-                    value={inputs.name}
-                    placeholder='Enter employee name'
-                    onChange={onhandleChange}
-                ></input> <br/>
-                <label>Employee UserName</label>
-                <input
-                    type="text"
-                    name='UserName'
-                    value={inputs.UserName}
-                    placeholder='Enter employee UserName'
-                    onChange={onhandleChange}
-                ></input><br></br>
-                <label>Employee Number</label>
-                <input
-                    type="Number"
-                    name='Number'
-                    value={inputs.Number}
-                    placeholder='Enter employee Phone Number'
-                    onChange={onhandleChange}
-                ></input><br></br>
-                <label>Employee email</label>
-                <input
-                    type="email"
-                    name='Email'
-                    value={inputs.email}
-                    placeholder='Enter employee email'
-                    onChange={onhandleChange}
-                ></input><br></br>
-
-                <label>Employee Password</label>
-                <input
-                    type="password"
-                    name='Password'
-                    value={inputs.pass}
-                    placeholder='Enter employee password'
-                    onChange={onhandleChange}
-                ></input><br></br>
-
-                <label>Employee Address</label>
-                <input
-                    type="text"
-                    name='Address'
-                    value={inputs.Address}
-                    placeholder='Enter employee Address'
-                    onChange={onhandleChange}
-                ></input>
-
-                <button type="submit">Submit</button>
-            </form>
-           </div>
+                <h1>Add New Employee</h1>
+                <form className={Css.Form} onSubmit={onformSubmit}>
+                    <label>Employee Name</label>
+                    <input
+                        type="text"
+                        name="Name"
+                        value={inputs.Name}
+                        placeholder="Enter employee name"
+                        onChange={onhandleChange}
+                    />
+                    {errors.Name && <span className={Css.error}>{errors.Name}</span>}
+                    <br />
+                    <label>Employee Username</label>
+                    <input
+                        type="text"
+                        name="UserName"
+                        value={inputs.UserName}
+                        placeholder="Enter employee username"
+                        onChange={onhandleChange}
+                    />
+                    {errors.UserName && <span className={Css.error}>{errors.UserName}</span>}
+                    <br />
+                    <label>Employee Number</label>
+                    <input
+                        type="text"
+                        name="Number"
+                        value={inputs.Number}
+                        placeholder="Enter employee number"
+                        onChange={onhandleChange}
+                    />
+                    {errors.Number && <span className={Css.error}>{errors.Number}</span>}
+                    <br />
+                    <label>Employee Email</label>
+                    <input
+                        type="email"
+                        name="Email"
+                        value={inputs.Email}
+                        placeholder="Enter employee email"
+                        onChange={onhandleChange}
+                    />
+                    {errors.Email && <span className={Css.error}>{errors.Email}</span>}
+                    <br />
+                    <label>Employee Password</label>
+                    <input
+                        type="password"
+                        name="Password"
+                        value={inputs.Password}
+                        placeholder="Enter employee password"
+                        onChange={onhandleChange}
+                    />
+                    {errors.Password && <span className={Css.error}>{errors.Password}</span>}
+                    <br />
+                    <label>Employee Address</label>
+                    <input
+                        type="text"
+                        name="Address"
+                        value={inputs.Address}
+                        placeholder="Enter employee address"
+                        onChange={onhandleChange}
+                    />
+                    {errors.Address && <span className={Css.error}>{errors.Address}</span>}
+                    <br />
+                    <div className={Css.btn}>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
         </>
-    )
+    );
 }
