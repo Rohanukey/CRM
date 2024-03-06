@@ -1,0 +1,15 @@
+.DashboardWrapper{
+    width: 80%;
+    min-height: 70vh;
+    /* border: 1px solid red; */
+}
+
+.CounterWrapper{
+    width: 100%;
+    height: 220px;
+    /* background-color: green; */
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}

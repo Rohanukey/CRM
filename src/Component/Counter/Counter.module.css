@@ -1,0 +1,27 @@
+.Container{
+    min-width: 200px;
+    height: 200px;
+    background-color: #387ADF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px ;
+    padding: 20px;
+}
+
+.Container span{
+    font-size: 80px;
+    font-weight: 500;
+    color:white;
+}
+.Container h2{
+    font-size: 40px;
+    font-weight: 500;
+    color:white;
+}
+.Container h4{
+    font-size: 16px;
+    font-weight: 400;
+    color:white;
+}

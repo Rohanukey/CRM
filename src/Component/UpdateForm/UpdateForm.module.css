@@ -1,0 +1,35 @@
+
+
+.FormWrapper{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.Form{
+    width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border: 1px solid black;
+    
+}
+
+.btns{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btns button{
+    height: 40px;
+    width: 150px;
+}
