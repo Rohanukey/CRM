@@ -13,6 +13,10 @@ function SideNav({ onNavItemClick }) {
     return (
         <>
             <div className={Css.SidenavWrapper}>
+                <div className={Css.Title}>
+                    <h3> Admin </h3>
+                </div>
+                <hr/>
                 <div className={Css.Profile}>
                     <div className={Css.PfImg}>
                         <img src={img1} />
@@ -21,8 +25,8 @@ function SideNav({ onNavItemClick }) {
                         <h3>Rohan ukey</h3>
                     </div>
                 </div>
+                <hr/>
                 <div className={Css.SideMenu}>
-                    <h3>SideMenu</h3>
                     <ul>
                         <li onClick={() => handleClick('dashboard')}><img src={img1} /><span>Dashboard</span></li>
                         <li onClick={() => handleClick('EmployeeTable')}><img src={img1} /><span>Employees</span></li>

@@ -133,6 +133,7 @@ export default function AddEmployee({ onNavItemClick }) {
                     <br />
                     <div className={Css.btn}>
                         <button type="submit">Submit</button>
+                        <button type="button" onClick={() => handleClick("EmployeeTable")}>Back</button>
                     </div>
                 </form>
             </div>

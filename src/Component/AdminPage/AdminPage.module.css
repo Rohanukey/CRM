@@ -1,3 +1,12 @@
+.pageContent{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    height: auto;
+    padding: 10px;
+}
+
 .AdminPageWrapper{
     width: 100%;
     min-height: 94vh;

@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext , useState} from 'react'
+import React, { useContext, useState } from 'react'
 import Css from "./AdminPage.module.css"
 import SideNav from '../SideNav/SideNav'
 import AddEmployee from '../AddEmployee/AddEmployee'
@@ -13,20 +13,20 @@ function AdminPage() {
   const handleNavItemClick = (component) => {
     setSelectedComponent(component);
   };
-  
+
 
   const renderComponent = () => {
     switch (selectedComponent) {
       case 'dashboard':
         return <Dashboard />;
       case 'EmployeeTable':
-        return <EmployeeTable  onNavItemClick={handleNavItemClick}/>;
+        return <EmployeeTable onNavItemClick={handleNavItemClick} />;
       case 'addEmployee':
-        return <AddEmployee onNavItemClick={handleNavItemClick}/>;
+        return <AddEmployee onNavItemClick={handleNavItemClick} />;
       case 'UpdateForm':
-        return <UpdateForm onNavItemClick={handleNavItemClick}/>;
+        return <UpdateForm onNavItemClick={handleNavItemClick} />;
       case 'EmployeeData':
-        return <UpdateForm onNavItemClick={handleNavItemClick}/>;
+        return <UpdateForm onNavItemClick={handleNavItemClick} />;
       default:
         return null;
     }
@@ -34,14 +34,15 @@ function AdminPage() {
 
   return (
     <>
-    
-      <div className={Css.AdminPageWrapper}>
-        <h1>Admin Dashborad</h1>
-        <div className={Css.ComponentWrapper}>
+      <div className={Css.pageContent}>
         <SideNav onNavItemClick={handleNavItemClick} />
-        {renderComponent()}
+        <div className={Css.AdminPageWrapper}>
+          <div className={Css.ComponentWrapper}>
+            {renderComponent()}
+          </div>
         </div>
       </div>
+
     </>
   )
 }
