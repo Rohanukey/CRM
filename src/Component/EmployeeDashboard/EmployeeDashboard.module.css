@@ -5,3 +5,21 @@
     border: 1px solid black;
     border-radius: 10px;
 }
+
+.AdminPageWrapper{
+    width: 100%;
+    min-height: 94vh;
+    background-color: #CCD3CA;
+    background-color: #FFF6E9;
+    padding: 10px;
+}
+
+.AdminPageWrapper h1{
+    text-align: center;
+}
+
+.ComponentWrapper{
+    width: 100%;
+    display: flex;
+    gap: 20px;  
+}

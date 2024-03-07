@@ -1,5 +1,5 @@
 .container {
-    height: 100vh;
+    height: 130vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -8,7 +8,7 @@
 
 
 form {
-    height: 836px;
+    height: 110vh;
     width: 600px;
     padding: 20px;
     display: flex;
@@ -36,4 +36,9 @@ form button {
     border-radius: 10px;
     background-color: azure;
     border: 1px solid black;
+}
+
+
+.btn {
+    cursor: pointer;
 }

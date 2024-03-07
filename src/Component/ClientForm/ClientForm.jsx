@@ -1,93 +1,100 @@
-
 import { useState } from 'react';
 import Css from './ClientForm.module.css';
-function ClientForm({ click }) {
 
+function ClientForm({ onNavItemClick }) {
+  const [inputs, setInputs] = useState({
+    name: "",
+    email: "",
+    contact: "",
+    Projectname: "",
+    Projectprice: "",
+    Advancepay: "",
+    Remainingpay: "",
+    date: "",
+    Address: "",
+  });
 
-  const [inputs, setInputs] = useState(
-    {
-      name: "",
-      email: "",
-      contact: "",
-      Projectname: "",
-      Projectprice: "",
-      Advancepay: "",
-      Remainingpay: "",
-      date: "",
-      Address: "",
-
-    }
-  )
-
-  
   const handleclick = (Component) => {
-    click(Component)
-  }
-
+    onNavItemClick(Component);
+  };
 
   const onhandlechange = (event) => {
-    const name = event.target.name
-    const value = event.target.value
-    setInputs((values) => ({ ...values, [name]: value }))
-  }
+    const { name, value } = event.target;
+    setInputs((prevInputs) => ({ ...prevInputs, [name]: value }));
+  };
+
+  const validateEmail = (email) => {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
+  };
+
+  const validatePhoneNumber = (phoneNumber) => {
+    // Add your phone number validation logic here
+    // For simplicity, let's assume it should be numeric and of certain length
+    return /^\d{10}$/.test(phoneNumber);
+  };
 
   const formsubmit = (event) => {
-    event.preventDefault()
-    const data = JSON.parse(localStorage.getItem('clientdata')) || []
+    event.preventDefault();
 
-    const newdata = [...data, inputs]
+    // Simple validation
+    if (!inputs.name || !inputs.email || !inputs.contact) {
+      alert("Please fill in all required fields.");
+      return;
+    }
 
-    localStorage.setItem('clientdata', JSON.stringify(newdata))
-    console.log(newdata)
+    // Email validation
+    if (!validateEmail(inputs.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
 
-    handleclick("ClientData")
-  }
+    // Phone number validation
+    if (!validatePhoneNumber(inputs.contact)) {
+      alert("Please enter a valid phone number.");
+      return;
+    }
+
+    const data = JSON.parse(localStorage.getItem('clientdata')) || [];
+    const newdata = [...data, inputs];
+    localStorage.setItem('clientdata', JSON.stringify(newdata));
+    handleclick("ClientData");
+  };
 
   return (
+    <div className={Css.container}>
+      <form onSubmit={formsubmit}>
+        <label htmlFor="name">Name:</label><br />
+        <input type="text" id="name" name="name" value={inputs.name} placeholder='Name' onChange={onhandlechange} required /><br />
 
-    <>
-      <div className={Css.container}>
+        <label htmlFor="email">Email:</label><br />
+        <input type="email" id="email" name="email" value={inputs.email} placeholder='Email' onChange={onhandlechange} required /><br />
 
+        <label htmlFor="contact">Contact no.:</label><br />
+        <input type="tel" id="contact" name="contact" value={inputs.contact} placeholder='Contact no.' onChange={onhandlechange} required /><br />
 
-        <form onSubmit={formsubmit}>
+        <label htmlFor="Projectname">Project name:</label><br />
+        <input type="text" id="Projectname" name="Projectname" value={inputs.Projectname} placeholder='Project name' onChange={onhandlechange} /><br />
 
-          <label htmlFor="fname">Name:</label><br />
-          <input type="text" id="name" name="name" value={inputs.name} placeholder='name' onChange={onhandlechange} /> <br />
+        <label htmlFor="Projectprice">Project price:</label><br />
+        <input type="text" id="Projectprice" name="Projectprice" value={inputs.Projectprice} placeholder='Project price' onChange={onhandlechange} /><br />
 
-          <label htmlFor="fname">Email:</label><br />
-          <input type="text" id="email" name="email" value={inputs.email} placeholder='mail id' onChange={onhandlechange} /><br />
+        <label htmlFor="Advancepay">Advance pay:</label><br />
+        <input type="text" id="Advancepay" name="Advancepay" value={inputs.Advancepay} placeholder='Advance pay' onChange={onhandlechange} /><br />
 
-          <label htmlFor="fname">Contact no.:</label><br />
-          <input type="text" id="Contact no." name="contact" value={inputs.contact} placeholder='Contact no.' onChange={onhandlechange} /><br />
+        <label htmlFor="Remainingpay">Remaining pay:</label><br />
+        <input type="text" id="Remainingpay" name="Remainingpay" value={inputs.Remainingpay} placeholder='Remaining pay' onChange={onhandlechange} /><br />
 
-          <label htmlFor="fname">Project name:</label><br />
-          <input type="text" id="Projectname" name="Projectname" value={inputs.Projectname} placeholder='Project name' onChange={onhandlechange} /><br />
+        <label htmlFor="date">Date:</label><br />
+        <input type="date" id="date" name="date" value={inputs.date} placeholder='Date' onChange={onhandlechange} /><br />
 
-          <label htmlFor="fname">Project price:</label><br />
-          <input type="text" id="Projectprice" name="Projectprice" value={inputs.Projectprice} placeholder='Project price' onChange={onhandlechange} /><br />
+        <label htmlFor="Address">Address:</label><br />
+        <input type="text" id="Address" name="Address" value={inputs.Address} placeholder='Address' onChange={onhandlechange} /><br />
 
-          <label htmlFor="fname">Advance pay:</label><br />
-          <input type="text" id="Advancepay" name="Advancepay" value={inputs.Advancepay} placeholder='Advance pay' onChange={onhandlechange} /><br />
-
-          <label htmlFor="fname">Remaining pay:</label><br />
-          <input type="text" id="Remainingpay" name="Remainingpay" value={inputs.Remainingpay} placeholder='Remaining pay' onChange={onhandlechange} /><br />
-
-          <label htmlFor="fname">Date:</label><br />
-          <input type="date" id="date" name="date" value={inputs.date} placeholder='date' onChange={onhandlechange} /> <br />
-
-          <label htmlFor="fname">Address:</label><br />
-          <input type="Address" id="Address" name="Address" value={inputs.Address} placeholder='Address' onChange={onhandlechange} /> <br />
-
-          <button className={Css.btn} type='submit' >Submit</button>
-        </form>
-
-
-      </div>
-
-    </>
-
-
-  )
+        <button className={Css.btn} type='submit'>Submit</button>
+      </form>
+    </div>
+  );
 }
 
 export default ClientForm;
