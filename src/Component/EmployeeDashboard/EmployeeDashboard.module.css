@@ -1,0 +1,7 @@
+.DashboardWrapper{
+    width: 70%;
+    margin-left: 40px;
+    background-color: rgb(166, 255, 255);
+    border: 1px solid black;
+    border-radius: 10px;
+}

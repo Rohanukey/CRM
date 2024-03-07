@@ -1,0 +1,73 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+.Employee {
+    width: 100%;
+    border: 2px solid black;
+}
+
+
+.Employee table {
+    width: 100%;
+
+}
+
+.Employee th {
+    height: 40px;
+    width: auto;
+    border: 1px solid black;
+
+}
+
+
+tbody td {
+    height: 40px;
+    width: 350px;
+    border: 1px solid black;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+
+
+
+.keys {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.keys button {
+    font-family: poppins;
+    font-weight: 400;
+    height: 40px;
+    width: 164px;
+    font-size: 19px;
+    background-color: azure;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.keys input{
+    height: 40px;
+    width:430px;
+    font-size: 18px;
+    color: #000;
+    border-radius: 5px;
+}
+.keys label {
+    font-size: 22px;
+    font-family: poppins;
+
+}
+td button{
+   
+    height: 35px;
+    width: 100px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.tr input{
+    width: 100px;
+}

@@ -6,6 +6,8 @@ import AddEmployee from '../AddEmployee/AddEmployee'
 import Dashboard from '../Dashboard/Dashboard'
 import UpdateForm from '../UpdateForm/UpdateForm'
 import EmployeeTable from '../EmployeeTable/EmployeeTable'
+import ClientData from '../ClientData/ClientData'
+import ClientForm from '../ClientForm/ClientForm'
 
 function AdminPage() {
 
@@ -25,8 +27,10 @@ function AdminPage() {
         return <AddEmployee onNavItemClick={handleNavItemClick}/>;
       case 'UpdateForm':
         return <UpdateForm onNavItemClick={handleNavItemClick}/>;
-      case 'EmployeeData':
-        return <UpdateForm onNavItemClick={handleNavItemClick}/>;
+      case 'ClinetData':
+        return <ClientData onNavItemClick={handleNavItemClick}/>;
+      case 'ClientForm':
+        return <ClientForm onNavItemClick={handleNavItemClick}/>;
       default:
         return null;
     }
