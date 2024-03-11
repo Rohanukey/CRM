@@ -10,9 +10,7 @@ import Dashboard from "./Component/Dashboard/Dashboard"
 import UpdateForm from "./Component/UpdateForm/UpdateForm"
 import EmployeeTable from "./Component/EmployeeTable/EmployeeTable"
 import Bar1 from "../Bar1"
-
-
-
+import Balancesheet from "./Component/Balancesheet/Balancesheet"
 
 
 function App() {
@@ -32,6 +30,7 @@ function App() {
             <Route path="/UpdateForm/:id" element={<ProtectedRoute Component={UpdateForm} />} />
             <Route path="/EmployeeTable/:id" element={<ProtectedRoute Component={EmployeeTable} />} />
             <Route path="/Bar" element={<ProtectedRoute Component={Bar1} />} />
+            <Route path="/BalanceSheet" element={<ProtectedRoute Component={Balancesheet} />} />
           </Routes>
       </BrowserRouter>
 

@@ -9,15 +9,14 @@ function Bar1() {
             <div style={{ width: 400, height: 300}} >
                 <Line
                     data={{
-                        labels: ["A", "B", "C" , "D" , "E" , "F" ],
+                        labels: ["A", "B", "C" , "D" , "E" , "F" , "G" ],
                         datasets: [
                             {
                                 label: "Revenue",
-                                data: [200, 100, 400 ,600,300,400]
+                                data: [0, 200, 100, 400 ,600,300,400]
                             }
                         ]
                     }}
-
                 />
             </div>
         </>

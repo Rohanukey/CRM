@@ -80,15 +80,6 @@
       "Password": "65464848452",
       "Address": "Koriea main street 7 ",
       "id": "4"
-    },
-    {
-      "id": "658c",
-      "Name": "Rohan ukey",
-      "UserName": "RohanRocks",
-      "Number": "7845236596",
-      "Email": "Sharma@gmail.com",
-      "Password": "745128963",
-      "Address": "78 main street"
     }
   ],
   "BalanceSheets": [
@@ -159,5 +150,37 @@
       "email": "tushar@gmail.com",
       "pass": "123"
     }
+  ],
+  "expenses":[
+    {
+      "item": "Chairs",
+      "date": "01/01/24",
+      "quantity" : 1,
+      "price": 10000
+    },
+    {
+      "item": "Chairs",
+      "date": "01/01/24",
+      "quantity" : 1,
+      "price": 10000
+    },
+    {
+      "item": "Chairs",
+      "date": "01/01/24",
+      "quantity" : 1,
+      "price": 10000
+    },
+    {
+      "item": "Chairs",
+      "date": "01/01/24",
+      "quantity" : 1,
+      "price": 10000
+    },
+    {
+      "item": "Chairs",
+      "date": "01/01/24",
+      "quantity" : 1,
+      "price": 10000
+    } 
   ]
 }

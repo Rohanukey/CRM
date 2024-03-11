@@ -6,6 +6,7 @@ import AddEmployee from '../AddEmployee/AddEmployee'
 import Dashboard from '../Dashboard/Dashboard'
 import UpdateForm from '../UpdateForm/UpdateForm'
 import EmployeeTable from '../EmployeeTable/EmployeeTable'
+import Balancesheet from '../Balancesheet/Balancesheet'
 
 function AdminPage() {
 
@@ -27,6 +28,8 @@ function AdminPage() {
         return <UpdateForm onNavItemClick={handleNavItemClick} />;
       case 'EmployeeData':
         return <UpdateForm onNavItemClick={handleNavItemClick} />;
+      case 'BalanceSheet':
+        return <Balancesheet onNavItemClick={handleNavItemClick} />;
       default:
         return null;
     }

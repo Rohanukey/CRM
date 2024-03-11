@@ -30,6 +30,7 @@ function SideNav({ onNavItemClick }) {
                     <ul>
                         <li onClick={() => handleClick('dashboard')}><img src={img1} /><span>Dashboard</span></li>
                         <li onClick={() => handleClick('EmployeeTable')}><img src={img1} /><span>Employees</span></li>
+                        <li onClick={() => handleClick('BalanceSheet')}><img src={img1} /><span>BalanceSheet</span></li>
                         {/*<li onClick={() => handleClick('addEmployee')}><img src={img1} /><span>Add Employee</span></li>
     <li onClick={() => handleClick('UpdateForm')}><img src={img1} /><span>UpdateForm</span></li>*/}
                     </ul>

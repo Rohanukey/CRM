@@ -1,7 +1,6 @@
 .SidenavWrapper {
     width: 15%;
     height: 90vh;
-    justify-content: space-evenly   ;
     border: 1px solid grey;
     display: flex;
     flex-direction: column;
