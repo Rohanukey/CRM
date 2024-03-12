@@ -11,6 +11,8 @@ import UpdateForm from "./Component/UpdateForm/UpdateForm"
 import EmployeeTable from "./Component/EmployeeTable/EmployeeTable"
 import EmployeeDashboard from "./Component/EmployeeDashboard/EmployeeDashboard"
 import ClientForm from "./Component/ClientForm/ClientForm"
+import Bar1 from "../Bar1"
+import Balancesheet from "./Component/Balancesheet/Balancesheet"
 
 
 function App() {
@@ -20,16 +22,18 @@ function App() {
     <>
 
       <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/Admin" element={<ProtectedRoute Component={AdminPage} />} />
-          <Route path="/EmployeePage" element={<ProtectedRoute Component={EmployeeDashboard} />} />
-          <Route path="/Dashboard" element={<ProtectedRoute Component={Dashboard} />} />
-          <Route path="/UpdateForm/:id" element={<ProtectedRoute Component={UpdateForm} />} />
-          <Route path="/EmployeeTable/:id" element={<ProtectedRoute Component={EmployeeTable} />} />
-          <Route path="/ClientForm" element={<ProtectedRoute Component={ClientForm} />} />
-        </Routes>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/Admin" element={<ProtectedRoute Component={AdminPage} />} />
+            <Route path="/EmployeePage" element={<ProtectedRoute Component={EmployeePage} />} />
+            <Route path="/Dashboard" element={<ProtectedRoute Component={Dashboard} />} />
+            <Route path="/UpdateForm/:id" element={<ProtectedRoute Component={UpdateForm} />} />
+            <Route path="/EmployeeTable/:id" element={<ProtectedRoute Component={EmployeeTable} />} />
+            <Route path="/Bar" element={<ProtectedRoute Component={Bar1} />} />
+            <Route path="/BalanceSheet" element={<ProtectedRoute Component={Balancesheet} />} />
+            <Route path="/ClientForm" element={<ProtectedRoute Component={ClientForm} />} />
+          </Routes>
       </BrowserRouter>
 
     </>

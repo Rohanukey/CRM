@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
@@ -69,7 +71,7 @@ function EmployeeTable({ onNavItemClick }) {
                         </tr>
                     </thead>
                     <tbody>
-                        {filteredData.map((item , index) => (
+                        {filteredData.map((item, index) => (
                             <tr key={item.id} className={Css.tbody}>
                                 <td>{index + 1}</td>
                                 <td>{item.Name}</td>

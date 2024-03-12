@@ -151,6 +151,7 @@
       "pass": "123"
     }
   ],
+
   "Clients": [
     {
       "id": "c5",
@@ -272,5 +273,38 @@
       "date": "2024-03-12",
       "Address": "india"
     }
+
+  "expenses":[
+    {
+      "item": "Chairs",
+      "date": "01/01/24",
+      "quantity" : 1,
+      "price": 10000
+    },
+    {
+      "item": "Chairs",
+      "date": "01/01/24",
+      "quantity" : 1,
+      "price": 10000
+    },
+    {
+      "item": "Chairs",
+      "date": "01/01/24",
+      "quantity" : 1,
+      "price": 10000
+    },
+    {
+      "item": "Chairs",
+      "date": "01/01/24",
+      "quantity" : 1,
+      "price": 10000
+    },
+    {
+      "item": "Chairs",
+      "date": "01/01/24",
+      "quantity" : 1,
+      "price": 10000
+    } 
+
   ]
 }
