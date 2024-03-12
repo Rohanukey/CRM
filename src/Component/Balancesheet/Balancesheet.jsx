@@ -39,7 +39,7 @@ function Balancesheet() {
                     </thead>
                     <tbody className={Css.tbody}>
                         <div className={Css.list}>
-                            <tr className={Css.tr3}>
+                            <tr className={Css.heading}>
                                 <td>Item</td>
                                 <td>Quantity</td>
                                 <td>Price</td>
