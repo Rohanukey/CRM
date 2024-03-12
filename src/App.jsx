@@ -33,6 +33,7 @@ function App() {
             <Route path="/Bar" element={<ProtectedRoute Component={Bar1} />} />
             <Route path="/BalanceSheet" element={<ProtectedRoute Component={Balancesheet} />} />
             <Route path="/ClientForm" element={<ProtectedRoute Component={ClientForm} />} />
+            <Route path="/EmployeeDashboard" element={<ProtectedRoute Component={EmployeeDashboard} />} />
           </Routes>
       </BrowserRouter>
 
