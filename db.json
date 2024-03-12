@@ -271,7 +271,10 @@
       "Remainingpay": "20,000",
       "date": "2024-03-12",
       "Address": "india"
-    },
+    }
+  ],
+
+  "expenses":[
     {
       "id": "ffd8",
       "name": "silent boy rohan",
