@@ -1,0 +1,208 @@
+.SidenavWrapper {
+    width: 100%;
+    height: 90vh;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px;
+    background-color: #387ADF;
+    position: sticky;
+    top: 60px;
+    
+}
+
+.SidenavWrapper hr {
+    width: 80%;
+    margin: 0 auto; /* Center the <hr> horizontally */
+}
+
+
+.Title{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Profile {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.PfImg {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.PfImg img {
+    width: 80%;
+    height: 80%;
+}
+
+.SideMenu {
+    width: 100%;
+    min-height:600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.PfName h3{
+    color: white;
+    font-size: 16px;
+}
+
+.SideMenu ul{
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 20px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.SideMenu ul li{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+}
+
+.SideMenu ul li:hover{
+    background-color: #e9e9e93e;
+}
+
+
+@media  (1600px <  width < 1920px) {
+    .SideMenu ul li{
+        display: flex;
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 20px;
+        color: white;
+    }
+}
+@media  (1299px <  width < 1601px) {
+    .SideMenu ul li{
+        display: flex;
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 20px;
+        color: white;
+    }
+
+}
+@media  (1023px <  width < 1300px) {
+
+    
+
+    .SideMenu ul li{
+        display: flex;
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 20px;
+        color: white;
+    }
+
+    .PfName h3{
+        color: white;
+        font-size: 14px;
+    }
+
+    .Profile {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .SideMenu span{
+        font-size: 12px;
+    }
+}
+@media  (769px <  width < 1024px) {
+    .SideMenu ul li{
+        display: flex;
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 20px;
+        color: white;
+    }
+
+    .PfName h3{
+        color: white;
+        font-size: 14px;
+    }
+
+    .Profile {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .SideMenu span{
+        font-size: 12px;
+    }
+}
+@media  (480px <  width < 770px) {
+    .SideMenu ul li{
+        display: flex;
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 20px;
+        color: white;
+    }
+
+    .PfName h3{
+        color: white;
+        font-size: 14px;
+    }
+
+    .Profile {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .SideMenu span{
+        font-size: 12px;
+    }
+}
