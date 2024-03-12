@@ -1,0 +1,52 @@
+.container {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.mainform {
+    height: 120vh;
+    width: 500px;
+    padding: 20px;
+    display: flex;
+    gap: -16px;
+    flex-direction: column;
+    background: rgb(252, 243, 209);
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+
+input {
+    height: 40px;
+    width: 450px;
+    font-size: 15px;
+    opacity: 0.9;
+
+}
+
+form button {
+    height: 50px;
+    width: 70%;
+    font-size: 21px;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    border-radius: 10px;
+    background-color: azure;
+    border: 1px solid black;
+}
+
+
+.btn {
+    cursor: pointer;
+}
+
+label {
+    font-size: 1rem;
+    font-family: Poppins;
+    font-weight: 600;
+    width: 95%;
+}

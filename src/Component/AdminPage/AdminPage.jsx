@@ -8,7 +8,6 @@ import UpdateForm from '../UpdateForm/UpdateForm';
 import EmployeeTable from '../EmployeeTable/EmployeeTable';
 import Balancesheet from '../Balancesheet/Balancesheet';
 import bars from "../../Assets_1/Bars.png"
-
 function AdminPage() {
 
   const [selectedComponent, setSelectedComponent] = useState('dashboard');
@@ -61,6 +60,13 @@ function AdminPage() {
 
   return (
     <>
+
+
+      <div className={Css.AdminPageWrapper}>
+        <h1>Admin Dashborad</h1>
+        <div className={Css.ComponentWrapper}>
+          <SideNav onNavItemClick={handleNavItemClick} />
+          {renderComponent()}
       <div className={Css.pageContent}>
 
         <div className={`${Css.ToggleNav} ${onTap || (width <= 1299 && onTap) ? Css.Display : ""}`}>
