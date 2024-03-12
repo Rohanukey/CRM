@@ -1,3 +1,12 @@
+.AdminPageWrapper{
+    width: 80%;
+    min-height: 94vh;
+    background-color: #CCD3CA;
+    background-color: #FFF6E9;
+    padding: 10px;
+}
+
+
 .pageContent{
     width: 100%;
     display: flex;
@@ -7,13 +16,7 @@
     padding: 10px;
 }
 
-.AdminPageWrapper{
-    width: 80%;
-    min-height: 94vh;
-    background-color: #CCD3CA;
-    background-color: #FFF6E9;
-    padding: 10px;
-}
+
 
 .AdminPageWrapper h1{
     text-align: center;

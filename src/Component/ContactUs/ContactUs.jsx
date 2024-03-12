@@ -61,7 +61,7 @@ function ContactUs() {
         }
         else if (inputs.select === "Employee") {
             localStorage.setItem("Employee", true)
-            navigate("/EmployeePage")
+            navigate("/EmployeeDashboard")
 
         }
         else if (inputs.select === "Client") {
