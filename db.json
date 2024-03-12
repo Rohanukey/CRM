@@ -151,13 +151,12 @@
       "pass": "123"
     }
   ],
-
   "Clients": [
     {
       "id": "c5",
       "name": "vaibhav",
-      "email": "ankit@gmail.com",
-      "contact": "8585858623",
+      "email": "vaibhav@gmail.com",
+      "contact": "8585558623",
       "Projectname": "ok",
       "Projectprice": "60,000",
       "Advancepay": "55555",
@@ -272,39 +271,18 @@
       "Remainingpay": "20,000",
       "date": "2024-03-12",
       "Address": "india"
+    },
+    {
+      "id": "ffd8",
+      "name": "silent boy rohan",
+      "email": "Tushar@gmail.com",
+      "contact": "9370355417",
+      "Projectname": "crm",
+      "Projectprice": "50,000",
+      "Advancepay": "30,000",
+      "Remainingpay": "20,000",
+      "date": "2024-03-07",
+      "Address": "india"
     }
-
-  "expenses":[
-    {
-      "item": "Chairs",
-      "date": "01/01/24",
-      "quantity" : 1,
-      "price": 10000
-    },
-    {
-      "item": "Chairs",
-      "date": "01/01/24",
-      "quantity" : 1,
-      "price": 10000
-    },
-    {
-      "item": "Chairs",
-      "date": "01/01/24",
-      "quantity" : 1,
-      "price": 10000
-    },
-    {
-      "item": "Chairs",
-      "date": "01/01/24",
-      "quantity" : 1,
-      "price": 10000
-    },
-    {
-      "item": "Chairs",
-      "date": "01/01/24",
-      "quantity" : 1,
-      "price": 10000
-    } 
-
   ]
 }
