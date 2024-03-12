@@ -80,15 +80,6 @@
       "Password": "65464848452",
       "Address": "Koriea main street 7 ",
       "id": "4"
-    },
-    {
-      "id": "658c",
-      "Name": "Rohan ukey",
-      "UserName": "RohanRocks",
-      "Number": "7845236596",
-      "Email": "Sharma@gmail.com",
-      "Password": "745128963",
-      "Address": "78 main street"
     }
   ],
   "BalanceSheets": [
@@ -158,6 +149,116 @@
       "username": "ram",
       "email": "tushar@gmail.com",
       "pass": "123"
+    }
+  ],
+  "Clients": [
+    {
+      "id": "c5",
+      "name": "ankit",
+      "email": "ankit@gmail.com",
+      "contact": "8585858623",
+      "Projectname": "ok",
+      "Projectprice": "60,000",
+      "Advancepay": "55555",
+      "Remainingpay": "965265",
+      "date": "2024-03-09",
+      "Address": "ok ok 0ko ok ok ok ok ok ok ok"
+    },
+    {
+      "id": "97cd",
+      "name": "tushar",
+      "email": "tusharha6@gmail.com",
+      "contact": "9561722023",
+      "Projectname": "techgicus",
+      "Projectprice": "500000",
+      "Advancepay": "30,000",
+      "Remainingpay": "300000",
+      "date": "2024-03-19",
+      "Address": "kim jon un"
+    },
+    {
+      "id": "52a4",
+      "name": "rohan ",
+      "email": "rohan@gmail.com",
+      "contact": "8986858487",
+      "Projectname": "crm",
+      "Projectprice": "202020",
+      "Advancepay": "40,000",
+      "Remainingpay": "300000",
+      "date": "2024-03-11",
+      "Address": "kim jon un"
+    },
+    {
+      "id": "03bc",
+      "name": "bharti",
+      "email": "bharti@gmail.com",
+      "contact": "9370355417",
+      "Projectname": "crm",
+      "Projectprice": "202020",
+      "Advancepay": "65632",
+      "Remainingpay": "300000",
+      "date": "2024-03-11",
+      "Address": "kim jon un"
+    },
+    {
+      "id": "40bf",
+      "name": "bahadur",
+      "email": "bahadur@gmail.com",
+      "contact": "5656565656",
+      "Projectname": "assdsd",
+      "Projectprice": "10.0000000",
+      "Advancepay": "65632",
+      "Remainingpay": "965265",
+      "date": "2024-03-11",
+      "Address": "kim jon un"
+    },
+    {
+      "id": "44bf",
+      "name": "bahadur",
+      "email": "bahadur@gmail.com",
+      "contact": "5656565656",
+      "Projectname": "assdsd",
+      "Projectprice": "10.0000000",
+      "Advancepay": "65632",
+      "Remainingpay": "965265",
+      "date": "2024-03-11",
+      "Address": "kim jon un"
+    },
+    {
+      "id": "45bf",
+      "name": "bahadur",
+      "email": "bahadur@gmail.com",
+      "contact": "5656565656",
+      "Projectname": "assdsd",
+      "Projectprice": "10.0000000",
+      "Advancepay": "65632",
+      "Remainingpay": "965265",
+      "date": "2024-03-11",
+      "Address": "kim jon un"
+    },
+    {
+      "id": "4cd1",
+      "name": "rohan ",
+      "email": "rohan@gmail.com",
+      "contact": "9656856325",
+      "Projectname": "assdsd",
+      "Projectprice": "60,000",
+      "Advancepay": "30,000",
+      "Remainingpay": "300000",
+      "date": "2024-03-27",
+      "Address": "pardi pull"
+    },
+    {
+      "id": "c74d",
+      "name": "aniket",
+      "email": "aniket@gmail.com",
+      "contact": "9561722001",
+      "Projectname": "techgicus",
+      "Projectprice": "60,000",
+      "Advancepay": "30,000",
+      "Remainingpay": "3,0000",
+      "date": "2024-03-22",
+      "Address": "kim jon un"
     }
   ]
 }

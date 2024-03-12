@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Css from './ClientData.module.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
-function ClientData({onNavItemClick }) {
+function ClientData({ onNavItemClick }) {
   const handleclick = (Component) => {
     onNavItemClick(Component);
   };
@@ -10,8 +11,33 @@ function ClientData({onNavItemClick }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [clientData, setClientData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
-  const [editingClient, setEditingClient] = useState(null); // State to hold the client being edited
-  const [editedClientData, setEditedClientData] = useState({}); // State to hold edited client data
+  const [editingClient, setEditingClient] = useState(null);
+  const [apidata, setApidata] = useState([]);
+  const [newClientData, setNewClientData] = useState({
+    name: '',
+    email: '',
+    contact: '',
+    Projectname: '',
+    Projectprice: '',
+    Advancepay: '',
+    Remainingpay: '',
+    date: '',
+    Address: ''
+  });
+  const url = "http://localhost:3000/Clients/";
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(url);
+        setApidata(response.data);
+      } catch (error) {
+        console.error("Error getting client data", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const fetchClientData = () => {
     const storedData = localStorage.getItem('clientdata');
@@ -25,7 +51,7 @@ function ClientData({onNavItemClick }) {
   }, []);
 
   useEffect(() => {
-    const filtered = clientData.filter((client) => {
+    const filtered = apidata.filter((client) => {
       const searchRegex = new RegExp(searchTerm, 'i');
       return (
         searchRegex.test(client.name) ||
@@ -34,48 +60,51 @@ function ClientData({onNavItemClick }) {
       );
     });
     setFilteredData(filtered);
-  }, [clientData, searchTerm]);
+  }, [apidata, searchTerm]);
 
-  const handleDelete = (index) => {
+  const handleDelete = async (id) => {
     const isConfirmed = window.confirm("Are you sure you want to delete this client?");
     if (isConfirmed) {
-      const updatedData = [...clientData];
-      updatedData.splice(index, 1);
-      setClientData(updatedData);
-      localStorage.setItem('clientdata', JSON.stringify(updatedData));
+      try {
+        await axios.delete(url + id);
+        const updatedData = apidata.filter(client => client.id !== id);
+        setApidata(updatedData);
+      } catch (error) {
+        console.error("Error deleting client data", error);
+      }
     }
   };
 
   const handleUpdate = (index) => {
-    setEditingClient(index); // Set the client index being edited
-    setEditedClientData(filteredData[index]); // Set the initial edited client data
+    setEditingClient(index);
   };
 
-  const handleSave = () => {
-    const updatedData = [...clientData];
-    updatedData[editingClient] = editedClientData; // Update the client data
-    setClientData(updatedData);
-    localStorage.setItem('clientdata', JSON.stringify(updatedData));
-    setEditingClient(null); // Reset editing state
-    setEditedClientData({}); // Reset edited client data
+  const handleSave = async (index) => {
+    try {
+      const response = await axios.put(url + filteredData[index].id, filteredData[index]);
+      const updatedData = [...apidata];
+      updatedData[index] = response.data;
+      setApidata(updatedData);
+      setEditingClient(null);
+    } catch (error) {
+      console.error("Error saving client data", error);
+    }
   };
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e, index) => {
     const { name, value } = e.target;
-    setEditedClientData({
-      ...editedClientData,
-      [name]: value
-    });
+    const updatedData = [...filteredData];
+    updatedData[index][name] = value;
+    setFilteredData(updatedData);
   };
 
   return (
     <>
       <div className={Css.Employee}>
         <div className={Css.keys}>
-          <button onClick={() => handleclick('ClientForm')}>Add + client</button>
-          <label htmlFor="search">Search</label>
+          <button className={Css.addbtn} onClick={() => handleclick('ClientForm')}>Add  client</button>
           <input
-            type="search" id="search" name="search" placeholder="search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+            type="search" id="search" name="search" placeholder="search client" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
         </div>
         <table>
           <thead>
@@ -90,36 +119,40 @@ function ClientData({onNavItemClick }) {
               <th>Remaining Pay</th>
               <th>Date</th>
               <th>Address</th>
+              <th>Action</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
             {filteredData.map((client, index) => (
               <tr key={index + 1} className={Css.tr}>
                 <td>{index + 1}</td>
-                <td>{editingClient === index ? <input id='1st' type="text" name="name" value={editedClientData.name} onChange={handleInputChange} /> : client.name}</td>
-                <td>{editingClient === index ? <input type="text" name="email" value={editedClientData.email} onChange={handleInputChange} /> : client.email}</td>
-                <td>{editingClient === index ? <input type="text" name="contact" value={editedClientData.contact} onChange={handleInputChange} /> : client.contact}</td>
-                <td>{editingClient === index ? <input type="text" name="Projectname" value={editedClientData.Projectname} onChange={handleInputChange} /> : client.Projectname}</td>
-                <td>{editingClient === index ? <input type="text" name="Projectprice" value={editedClientData.Projectprice} onChange={handleInputChange} /> : client.Projectprice}</td>
-                <td>{editingClient === index ? <input type="text" name="Advancepay" value={editedClientData.Advancepay} onChange={handleInputChange} /> : client.Advancepay}</td>
-                <td>{editingClient === index ? <input type="text" name="Remainingpay" value={editedClientData.Remainingpay} onChange={handleInputChange} /> : client.Remainingpay}</td>
-                <td>{editingClient === index ? <input type="text" name="date" value={editedClientData.date} onChange={handleInputChange} /> : client.date}</td>
-                <td>{editingClient === index ? <input type="text" name="Address" value={editedClientData.Address} onChange={handleInputChange} /> : client.Address}</td>
+                <td>{editingClient === index ? <input id='1st' type="text" name="name" value={client.name} onChange={(e) => handleInputChange(e, index)} /> : client.name}</td>
+                <td>{editingClient === index ? <input type="text" name="email" value={client.email} onChange={(e) => handleInputChange(e, index)} /> : client.email}</td>
+                <td>{editingClient === index ? <input type="text" name="contact" value={client.contact} onChange={(e) => handleInputChange(e, index)} /> : client.contact}</td>
+                <td>{editingClient === index ? <input type="text" name="Projectname" value={client.Projectname} onChange={(e) => handleInputChange(e, index)} /> : client.Projectname}</td>
+                <td>{editingClient === index ? <input type="text" name="Projectprice" value={client.Projectprice} onChange={(e) => handleInputChange(e, index)} /> : client.Projectprice}</td>
+                <td>{editingClient === index ? <input type="text" name="Advancepay" value={client.Advancepay} onChange={(e) => handleInputChange(e, index)} /> : client.Advancepay}</td>
+                <td>{editingClient === index ? <input type="text" name="Remainingpay" value={client.Remainingpay} onChange={(e) => handleInputChange(e, index)} /> : client.Remainingpay}</td>
+                <td>{editingClient === index ? <input type="text" name="date" value={client.date} onChange={(e) => handleInputChange(e, index)} /> : client.date}</td>
+                <td>{editingClient === index ? <input type="text" name="Address" value={client.Address} onChange={(e) => handleInputChange(e, index)} /> : client.Address}</td>
                 <td>
                   {editingClient === index ? (
                     <>
-                      <button onClick={handleSave}>Save</button>
+                      <button onClick={() => handleSave(index)}>Save</button>
                       <button onClick={() => setEditingClient(null)}>Cancel</button>
-
                     </>
                   ) : (
-                    <button onClick={() => handleUpdate(index)}>Update</button>
+                    <button className={Css.del} onClick={() => handleUpdate(index)}>Update</button>
                   )}
-                  <button onClick={() => handleDelete(index)}> Delete </button>
+                </td>
+                <td>
+                  <button className={Css.del} onClick={() => handleDelete(client.id)}>Delete</button>
                 </td>
               </tr>
             ))}
           </tbody>
+
         </table>
       </div>
     </>

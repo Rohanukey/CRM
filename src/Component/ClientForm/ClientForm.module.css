@@ -1,5 +1,5 @@
 .container {
-    height: 130vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -7,29 +7,30 @@
 }
 
 
-form {
-    height: 110vh;
-    width: 600px;
+.mainform {
+    height: 120vh;
+    width: 500px;
     padding: 20px;
     display: flex;
     gap: -16px;
     flex-direction: column;
     background: rgb(252, 243, 209);
     border: 1px solid black;
+    border-radius: 15px;
 }
 
 
 input {
-    height: 30px;
-    width: 570px;
+    height: 40px;
+    width: 450px;
     font-size: 15px;
     opacity: 0.9;
+
 }
 
 form button {
-    height: 40px;
+    height: 50px;
     width: 70%;
-    margin-left: 14%;
     font-size: 21px;
     letter-spacing: 2.5px;
     font-weight: 500;
@@ -41,4 +42,11 @@ form button {
 
 .btn {
     cursor: pointer;
+}
+
+label {
+    font-size: 1rem;
+    font-family: Poppins;
+    font-weight: 600;
+    width: 95%;
 }

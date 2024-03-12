@@ -1,7 +1,13 @@
 import { useState } from 'react';
 import Css from './ClientForm.module.css';
+import axios from 'axios';
 
 function ClientForm({ onNavItemClick }) {
+
+
+  const [apidata, setApidata] = useState([])
+  const url = "http://localhost:3000/Clients"
+
   const [inputs, setInputs] = useState({
     name: "",
     email: "",
@@ -14,9 +20,24 @@ function ClientForm({ onNavItemClick }) {
     Address: "",
   });
 
+  const post = () => {
+
+    try {
+      axios.post(url, inputs)
+      console.log(Response.data)
+    }
+    catch (err) {
+      console.log("Error posting data", err)
+    }
+
+
+
+  }
+
   const handleclick = (Component) => {
     onNavItemClick(Component);
   };
+
 
   const onhandlechange = (event) => {
     const { name, value } = event.target;
@@ -29,27 +50,22 @@ function ClientForm({ onNavItemClick }) {
   };
 
   const validatePhoneNumber = (phoneNumber) => {
-    // Add your phone number validation logic here
-    // For simplicity, let's assume it should be numeric and of certain length
     return /^\d{10}$/.test(phoneNumber);
   };
 
   const formsubmit = (event) => {
     event.preventDefault();
 
-    // Simple validation
     if (!inputs.name || !inputs.email || !inputs.contact) {
       alert("Please fill in all required fields.");
       return;
     }
 
-    // Email validation
     if (!validateEmail(inputs.email)) {
       alert("Please enter a valid email address.");
       return;
     }
 
-    // Phone number validation
     if (!validatePhoneNumber(inputs.contact)) {
       alert("Please enter a valid phone number.");
       return;
@@ -58,12 +74,13 @@ function ClientForm({ onNavItemClick }) {
     const data = JSON.parse(localStorage.getItem('clientdata')) || [];
     const newdata = [...data, inputs];
     localStorage.setItem('clientdata', JSON.stringify(newdata));
+    post()
     handleclick("ClientData");
   };
 
   return (
     <div className={Css.container}>
-      <form onSubmit={formsubmit}>
+      <form className={Css.mainform} onSubmit={formsubmit}>
         <label htmlFor="name">Name:</label><br />
         <input type="text" id="name" name="name" value={inputs.name} placeholder='Name' onChange={onhandlechange} required /><br />
 

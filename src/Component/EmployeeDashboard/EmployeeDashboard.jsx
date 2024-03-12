@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Css from './EmployeeDashboard.module.css'
 import axios from 'axios'
-import SideNav from '../SideNav/SideNav'
+import SideNav from '../EmpSideNav/EmpSideNav'
 import AddEmployee from '../AddEmployee/AddEmployee'
 import Dashboard from '../Dashboard/Dashboard'
 import UpdateForm from '../UpdateForm/UpdateForm'
@@ -27,7 +27,7 @@ function EmployeeDashboard() {
                 return <AddEmployee onNavItemClick={handleNavItemClick} />;
             case 'UpdateForm':
                 return <UpdateForm onNavItemClick={handleNavItemClick} />;
-            case 'ClinetData':
+            case 'ClientData':
                 return <ClientData onNavItemClick={handleNavItemClick} />;
             case 'ClientForm':
                 return <ClientForm onNavItemClick={handleNavItemClick} />;
@@ -40,7 +40,7 @@ function EmployeeDashboard() {
         <>
 
             <div className={Css.AdminPageWrapper}>
-                <h1>Admin Dashborad</h1>
+                <h1>Employee Dashborad</h1>
                 <div className={Css.ComponentWrapper}>
                     <SideNav onNavItemClick={handleNavItemClick} />
                     {renderComponent()}

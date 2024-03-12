@@ -1,73 +1,94 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
 .Employee {
-    width: 100%;
-    border: 2px solid black;
+    width: 80%;
 }
 
 
 .Employee table {
     width: 100%;
+    background-color: #a4c7fc;
 
 }
 
 .Employee th {
     height: 40px;
-    width: auto;
-    border: 1px solid black;
+    width: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    word-wrap: break-word;
+    background-color: #8EACCD;
 
 }
 
 
 tbody td {
     height: 40px;
-    width: 350px;
-    border: 1px solid black;
+    width: 300px;
+    font-size: 15px;
+    font-weight: 300;
+    border: 1px solid #ababab;
     text-align: center;
     word-wrap: break-word;
 }
 
 
-
-
 .keys {
     display: flex;
-    height: 50px;
+    height: 85px;
+    width: 80%;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 60px;
 }
 
 .keys button {
     font-family: poppins;
     font-weight: 400;
-    height: 40px;
-    width: 164px;
+    height: 50px;
+    width: 200px;
+    color: aliceblue;
     font-size: 19px;
-    background-color: azure;
-    border-radius: 10px;
+    background-color: #387ADF;
+    border-radius: 25px;
+    border: none;
     cursor: pointer;
 }
-.keys input{
-    height: 40px;
-    width:430px;
-    font-size: 18px;
+
+
+.keys input {
+    height: 50px;
+    width: 600px;
+    font-size: 15px;
     color: #000;
-    border-radius: 5px;
+    font-weight: 500;
+    border: 2px solid blue;
+    border-radius: 35px;
 }
+
 .keys label {
     font-size: 22px;
     font-family: poppins;
 
 }
-td button{
-   
+
+td button {
+
     height: 35px;
     width: 100px;
     border-radius: 5px;
     font-size: 15px;
 }
 
-.tr input{
+.tr input {
     width: 100px;
 }
+
+.del {
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #B5C0D0;
+    border: 1px solid gray;
+}
+
+
