@@ -10,7 +10,7 @@ function UpdateForm({ onNavItemClick }) {
     };
     const navigate = useNavigate();
     const { id } = useParams();
-    const url = "http://localhost:3000/user/";
+    const url = "http://localhost:3000/Employees/";
     const [inputs, setInputs] = useState({
         Name: '',
         UserName: '',

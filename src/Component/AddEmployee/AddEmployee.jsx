@@ -56,7 +56,7 @@ export default function AddEmployee({ onNavItemClick }) {
         event.preventDefault();
         if (validateForm()) {
             try {
-                await axios.post('http://localhost:3000/user', inputs);
+                await axios.post('http://localhost:3000/Employees/', inputs);
                 console.log('Data successfully posted');
                 handleClick('EmployeeTable');
             } catch (error) {
