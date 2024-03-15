@@ -13,6 +13,7 @@ import UpdateForm from "./Component/UpdateForm/UpdateForm"
 import EmployeeTable from "./Component/EmployeeTable/EmployeeTable"
 import EmployeeDashboard from "./Component/EmployeeDashboard/EmployeeDashboard"
 import ClientForm from "./Component/ClientForm/ClientForm"
+import ClientList from "./Component/ClientList/ClientList"
 import Bar1 from "../Bar1"
 import Balancesheet from "./Component/Balancesheet/Balancesheet"
 
@@ -25,12 +26,12 @@ function App() {
     <>
 
       <BrowserRouter>
+
           <Header />
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/Tracker" element={<Tracker />} />
             <Route path="/Invoice" element={<Invoice />} />
-
             <Route path="/Admin" element={<AdminPage />} />
             {/* <Route path="/Admin" element={<ProtectedRoute Component={AdminPage} />} /> */}
             <Route path="/EmployeePage" element={<ProtectedRoute Component={EmployeePage} />} />
@@ -43,6 +44,7 @@ function App() {
             {/*<Route path="/EmployeeDashboard" element={<ProtectedRoute Component={EmployeeDashboard} />} />*/}
             <Route path="/EmployeeDashboard" element={<EmployeeDashboard/>}/>
           </Routes>
+
       </BrowserRouter>
 
     </>

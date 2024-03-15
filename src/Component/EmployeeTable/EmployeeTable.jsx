@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 
 
 function EmployeeTable({ onNavItemClick }) {
-    const url = "http://localhost:3000/user/";
+    const url = "http://localhost:3000/Employees/";
     const [apidata, setApidata] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
 
