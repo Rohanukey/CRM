@@ -1,0 +1,41 @@
+.maincontainer {
+    width: 100%;
+    background: #a4c7fc;
+}
+
+.ClientList {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.clientlistWrapper{
+    border: 1px solid black;
+}
+
+tr th {
+    border: 1px solid black;
+    height: 50px;
+    width: 300px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    word-wrap: break-word;
+    background:#8EACCD;
+}
+
+tr td {
+    border: 1px solid black;
+}
+
+.th{
+    width: 100px;
+}
+.td{
+    width: 100px;
+}

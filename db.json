@@ -1,6 +1,13 @@
 {
   "Employees": [
     {
+      "Name":"bharti",
+      "UserName":"Divya",
+      "Email":"b@gmail.com",
+      "Password":"Divya123"
+
+    },
+    {
       "Name": "True_shar",
       "UserName": "tush@4566",
       "Number": "4946538888",
@@ -176,8 +183,8 @@
     {
       "id": "c5",
       "name": "vaibhav",
-      "email": "ankit@gmail.com",
-      "contact": "8585858623",
+      "email": "vaibhavi@gmail.com",
+      "contact": "8585558623",
       "Projectname": "ok",
       "Projectprice": "60,000",
       "Advancepay": "55555",
@@ -292,6 +299,35 @@
       "Remainingpay": "20,000",
       "date": "2024-03-12",
       "Address": "india"
+
+    },
+    {
+      "id": "0657",
+      "name": "vaibhav",
+      "email": "vaibhav@gmail.com",
+      "contact": "9370355417",
+      "Projectname": "techgicus",
+      "Projectprice": "500000",
+      "Advancepay": "65632",
+      "Remainingpay": "300000",
+      "date": "2024-03-22",
+      "Address": "india"
+    },
+    {
+      "id": "54db",
+      "name": "tushar",
+      "email": "yash@gmail.com",
+      "contact": "9656856325",
+      "Projectname": "techgicus",
+      "Projectprice": "500000",
+      "Advancepay": "30,000",
+      "Remainingpay": "20,000",
+      "date": "2024-03-15",
+      "Address": "pardi pull"
+    }
+  ],
+  "expenses": [
+
     }
   ],
   "expenses": [
@@ -319,11 +355,95 @@
       "quantity": 1,
       "price": 10000
     },
+
     {
+
       "item": "Chairs",
       "date": "01/01/24",
       "quantity": 1,
       "price": 10000
+
+    } 
+
+  ],
+  
+    "signUp": [
+      {
+        "username": "Bharti",
+        "password": "Zade"
+      }
+    ],
+    
+      "summary": [
+        { 
+          "budget": 10000 
+        }
+      ],
+      
+
+  "projects": [
+      {
+          "id": 1,
+          "name": "Divya",
+          "Project": "Project_1",
+          "date": "2024-03-11",
+          "totalAmount": 5000,
+          "advancedAmount": 2000,
+          "remainingAmount": 3000
+      },
+      {
+          "id": 2,
+          "name": "Bharti",
+          "Project": "Project_2",
+          "date": "2024-03-12",
+          "totalAmount": 8000,
+          "advancedAmount": 3000,
+          "remainingAmount": 5000
+      },
+      {
+          "id": 3,
+          "name": "Rohan",
+          "Project": "Project_3",
+          "date": "2024-03-13",
+          "totalAmount": 6000,
+          "advancedAmount": 2500,
+          "remainingAmount": 3500
+      },
+      {
+          "id": 4,
+          "name": "Tushar",
+          "Project": "Project_4",
+          "date": "2024-03-14",
+          "totalAmount": 7000,
+          "advancedAmount": 4000,
+          "remainingAmount": 3000
+      },
+      {
+          "id": 5,
+          "name": "Ankit",
+          "Project": "Project_5",
+          "date": "2024-03-15",
+          "totalAmount": 9000,
+          "advancedAmount": 3500,
+          "remainingAmount": 5500
+      },
+    {
+
+      "id": "ffd8",
+      "name": "silent boy rohan",
+      "email": "Tushar@gmail.com",
+      "contact": "9370355417",
+      "Projectname": "crm",
+      "Projectprice": "50,000",
+      "Advancepay": "30,000",
+      "Remainingpay": "20,000",
+      "date": "2024-03-07",
+      "Address": "india"
     }
   ]
 }
+
+    
+  
+  
+  

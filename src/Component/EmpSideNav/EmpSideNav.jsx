@@ -12,23 +12,24 @@ function SideNav({ onNavItemClick }) {
 
     return (
         <>
+        
             <div className={Css.SidenavWrapper}>
                 <div className={Css.Profile}>
-                    <div className={Css.PfImg}>
-                        <img src={img1} />
-                    </div>
+                   
                     <div className={Css.PfName}>
-                        <h3>Rohan ukey</h3>
+                        <h3>Employee Dashboard</h3>
                     </div>
                 </div>
                 <div className={Css.SideMenu}>
-                    <h3>SideMenu</h3>
                     <ul>
                         <li onClick={() => handleClick('dashboard')}><img src={img1} /><span>Dashboard</span></li>
-                        <li onClick={() => handleClick('EmployeeTable')}><img src={img1} /><span>Employees</span></li>
+                        {/*} <li onClick={() => handleClick('EmployeeTable')}><img src={img1} /><span>Employees</span></li>*/}
                         <li onClick={() => handleClick('ClientData')}><img src={img1} /><span>ClientData</span></li>
                         {/*<li onClick={() => handleClick('addEmployee')}><img src={img1} /><span>Add Employee</span></li>
-    <li onClick={() => handleClick('UpdateForm')}><img src={img1} /><span>UpdateForm</span></li>*/}
+                       <li onClick={() => handleClick('UpdateForm')}><img src={img1} /><span>UpdateForm</span></li>*/}
+
+                        <li onClick={() => handleClick('ClientList')}><img src={img1} /><span>Client List</span></li>
+
                     </ul>
                 </div>
             </div>
@@ -36,4 +37,4 @@ function SideNav({ onNavItemClick }) {
     )
 }
 
-export default SideNav
+export default SideNav;

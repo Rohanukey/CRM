@@ -1,0 +1,423 @@
+/* 
+
+.container {
+    width:100%;
+    min-height: 70vh;
+  
+    margin: 0 auto;
+    padding: 20px;
+    
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .trackerSection{
+    
+    width:65%;
+    min-width: auto;
+
+   
+  }
+  .budgetItem{
+    height: 100px;
+    width: 290px;
+    background-color:#70b38b;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+
+
+  }
+  .spentItem{
+    
+    height: 100px;
+    width: 290px;
+    background-color:#70b38b;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+
+
+  }
+  .profitItem{
+    
+    height: 100px;
+    width: 290px;
+    background-color: #70b38b;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+  
+  .budgetSection {
+    display: flex;
+   
+    height: 120px;
+    width: 80%;
+    margin-left: 30px;
+
+    
+    
+    margin-bottom: 20px;
+    
+    
+
+  }
+
+  .contain{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    
+  }
+  
+  
+   .addExpenseSection {
+
+    width: 550px;
+    min-height:auto ;
+   
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    
+  } 
+   .add{
+    margin-bottom: 30px;
+  } 
+ 
+
+  .addExpenseSection input {
+    margin-bottom: 40px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 50px;
+  }
+
+  .addExpenseSection button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 50px;
+    width: auto;
+    
+    
+    
+    
+  }
+
+   .expenseList {
+    width: 80%;
+    margin-left: 30px;
+    margin-top: 40px;
+  
+    
+  }
+  
+  .expenseList ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .expenseList li {
+    margin-bottom: 10px;
+  }
+  
+  .expenseList li button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .expenseList li button:hover {
+    background-color: #c82333;
+  }
+     
+
+  .expenseList {
+    margin-top: 20px;
+  }
+  
+  .expenseHeading {
+    margin-bottom: 10px;
+  }
+  
+  .expenseTable {
+    width: 100%;
+    border-collapse: collapse;
+    
+  }
+  
+  .expenseTable th,
+  .expenseTable td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  .expenseTable th {
+    background-color: #f2f2f2;
+  }
+  
+  .expenseTable tbody tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .expenseTable td button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .expenseTable td button:hover {
+    background-color: #c82333;
+  }
+   */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+  .container {
+    width:100%;
+    min-height: 70vh;
+  
+    margin: 0 auto;
+    padding: 20px;
+    
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .trackerSection{
+    
+    width:65%;
+    min-width: auto;
+
+   
+  }
+  .budgetItem{
+    height: 100px;
+    width: 290px;
+    background-color:#70b38b;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+
+
+  }
+  .spentItem{
+    
+    height: 100px;
+    width: 290px;
+    background-color:#70b38b;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+
+
+  }
+  .profitItem{
+    
+    height: 100px;
+    width: 290px;
+    background-color: #70b38b;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+  
+  .budgetSection {
+    display: flex;
+   
+    height: 120px;
+    width: 80%;
+    margin-left: 30px;
+
+    
+    
+    margin-bottom: 20px;
+    
+    
+
+  }
+
+  .contain{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    
+  }
+  
+  
+   .addExpenseSection {
+
+    width: 550px;
+    min-height:auto ;
+   
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    
+    
+    
+    
+    
+
+    
+
+
+  
+  
+  
+  } 
+   .add{
+    margin-bottom: 30px;
+  } 
+ 
+
+  .addExpenseSection input {
+    margin-bottom: 40px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 50px;
+  }
+
+  .addExpenseSection button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 50px;
+    width: auto;
+    
+    
+    
+    
+  }
+
+   .expenseList {
+    width: 80%;
+    margin-left: 30px;
+    margin-top: 40px;
+  
+    
+  }
+  
+  .expenseList ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .expenseList li {
+    margin-bottom: 10px;
+  }
+  
+  .expenseList li button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .expenseList li button:hover {
+    background-color: #c82333;
+  }
+     
+
+  .expenseList {
+    margin-top: 20px;
+  }
+  
+  .expenseHeading {
+    margin-bottom: 10px;
+  }
+  
+  .expenseTable {
+    width: 100%;
+    border-collapse: collapse;
+    
+  }
+  
+  .expenseTable th,
+  .expenseTable td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #ccc;
+    border: none;
+  
+    text-align: center;
+  }
+  
+  .expenseTable th {
+    background-color: #f2f2f2;
+  }
+  
+  .expenseTable tbody tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .expenseTable td button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .expenseTable td button:hover {
+    background-color: #c82333;
+  }
+  
+ 
+      
+

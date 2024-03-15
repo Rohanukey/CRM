@@ -17,10 +17,15 @@
 .AdminPageWrapper h1{
     text-align: center;
     height: 70px;
+    width: 100%;
 }
 
 .ComponentWrapper{
     width: 100%;
     display: flex;
     gap: 20px;  
+}
+
+SideNav{
+    width: 100%;
 }

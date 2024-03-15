@@ -7,7 +7,8 @@ import Dashboard from '../Dashboard/Dashboard';
 import UpdateForm from '../UpdateForm/UpdateForm';
 import EmployeeTable from '../EmployeeTable/EmployeeTable';
 import Balancesheet from '../Balancesheet/Balancesheet';
-import bars from "../../Assets_1/Bars.png"
+import bars from "../../assets/react.svg"  
+
 function AdminPage() {
 
   const [selectedComponent, setSelectedComponent] = useState('dashboard');
@@ -33,6 +34,7 @@ function AdminPage() {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
+    
   }, []);
 
   const toggleToggleNav = () => {
@@ -73,6 +75,7 @@ function AdminPage() {
           </div>
         </div>
       </div>
+
     </>
   )
 }

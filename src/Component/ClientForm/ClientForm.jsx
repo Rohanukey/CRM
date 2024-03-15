@@ -53,30 +53,34 @@ function ClientForm({ onNavItemClick }) {
     return /^\d{10}$/.test(phoneNumber);
   };
 
-  const formsubmit = (event) => {
-    event.preventDefault();
+ const formsubmit = (event) => {
+  event.preventDefault();
 
-    if (!inputs.name || !inputs.email || !inputs.contact) {
-      alert("Please fill in all required fields.");
-      return;
-    }
+  // Check if any required fields are empty
+  if (!inputs.name || !inputs.email || !inputs.contact) {
+    alert("Please fill in all required fields.");
+    return;
+  }
 
-    if (!validateEmail(inputs.email)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
+  // Validate email and phone number
+  if (!validateEmail(inputs.email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
 
-    if (!validatePhoneNumber(inputs.contact)) {
-      alert("Please enter a valid phone number.");
-      return;
-    }
+  if (!validatePhoneNumber(inputs.contact)) {
+    alert("Please enter a valid phone number.");
+    return;
+  }
 
-    const data = JSON.parse(localStorage.getItem('clientdata')) || [];
-    const newdata = [...data, inputs];
-    localStorage.setItem('clientdata', JSON.stringify(newdata));
-    post()
-    handleclick("ClientData");
-  };
+  // Proceed with form submission
+  const data = JSON.parse(localStorage.getItem('clientdata')) || [];
+  const newdata = [...data, inputs];
+  localStorage.setItem('clientdata', JSON.stringify(newdata));
+  post();
+  handleclick("ClientData");
+};
+
 
   return (
     <div className={Css.container}>
