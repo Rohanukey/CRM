@@ -155,7 +155,7 @@
     {
       "id": "c5",
       "name": "vaibhav",
-      "email": "vaibhav@gmail.com",
+      "email": "vaibhavi@gmail.com",
       "contact": "8585558623",
       "Projectname": "ok",
       "Projectprice": "60,000",
@@ -271,10 +271,33 @@
       "Remainingpay": "20,000",
       "date": "2024-03-12",
       "Address": "india"
+    },
+    {
+      "id": "0657",
+      "name": "vaibhav",
+      "email": "vaibhav@gmail.com",
+      "contact": "9370355417",
+      "Projectname": "techgicus",
+      "Projectprice": "500000",
+      "Advancepay": "65632",
+      "Remainingpay": "300000",
+      "date": "2024-03-22",
+      "Address": "india"
+    },
+    {
+      "id": "54db",
+      "name": "tushar",
+      "email": "yash@gmail.com",
+      "contact": "9656856325",
+      "Projectname": "techgicus",
+      "Projectprice": "500000",
+      "Advancepay": "30,000",
+      "Remainingpay": "20,000",
+      "date": "2024-03-15",
+      "Address": "pardi pull"
     }
   ],
-
-  "expenses":[
+  "expenses": [
     {
       "id": "ffd8",
       "name": "silent boy rohan",

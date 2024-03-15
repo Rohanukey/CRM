@@ -8,6 +8,7 @@ import UpdateForm from '../UpdateForm/UpdateForm'
 import EmployeeTable from '../EmployeeTable/EmployeeTable'
 import ClientData from '../ClientData/ClientData'
 import ClientForm from '../ClientForm/ClientForm'
+import ClientList from '../ClientList/ClientList'
 
 function EmployeeDashboard() {
 
@@ -31,6 +32,8 @@ function EmployeeDashboard() {
                 return <ClientData onNavItemClick={handleNavItemClick} />;
             case 'ClientForm':
                 return <ClientForm onNavItemClick={handleNavItemClick} />;
+            case 'ClientList':
+                return <ClientList onNavItemClick={handleNavItemClick} />;
             default:
                 return null;
         }
@@ -40,7 +43,6 @@ function EmployeeDashboard() {
         <>
 
             <div className={Css.AdminPageWrapper}>
-                <h1>Employee Dashborad</h1>
                 <div className={Css.ComponentWrapper}>
                     <SideNav onNavItemClick={handleNavItemClick} />
                     {renderComponent()}
