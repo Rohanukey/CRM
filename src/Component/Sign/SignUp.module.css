@@ -1,0 +1,60 @@
+
+
+
+
+
+.container {
+    width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-family: Poppins;
+    margin-top: 150px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); 
+}
+
+.inputGroup {
+    margin-bottom: 20px;
+}
+
+.inputGroup label {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+
+.inputField {
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 40px;
+    background-color: #e1edf0;
+    margin-left: 20px;
+}
+
+.bt {
+    width: 90%;
+    padding: 10px;
+    background-color: #45a049;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 20px;
+    height: 40px;
+    transition: background-color 0.3s ease; 
+    margin-left: 20px;
+}
+
+.log {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bt:hover {
+    background-color: #0056b3;
+}

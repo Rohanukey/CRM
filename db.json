@@ -1,6 +1,13 @@
 {
   "user": [
     {
+      "Name":"bharti",
+      "UserName":"Divya",
+      "Email":"b@gmail.com",
+      "Password":"Divya123"
+
+    },
+    {
       "Name": "True_shar",
       "UserName": "tush@4566",
       "Number": "4946538888",
@@ -307,5 +314,72 @@
       "price": 10000
     } 
 
+  ],
+  
+    "signUp": [
+      {
+        "username": "Bharti",
+        "password": "Zade"
+      }
+    ],
+    
+      "summary": [
+        { 
+          "budget": 10000 
+        }
+      ],
+      
+
+  "projects": [
+      {
+          "id": 1,
+          "name": "Divya",
+          "Project": "Project_1",
+          "date": "2024-03-11",
+          "totalAmount": 5000,
+          "advancedAmount": 2000,
+          "remainingAmount": 3000
+      },
+      {
+          "id": 2,
+          "name": "Bharti",
+          "Project": "Project_2",
+          "date": "2024-03-12",
+          "totalAmount": 8000,
+          "advancedAmount": 3000,
+          "remainingAmount": 5000
+      },
+      {
+          "id": 3,
+          "name": "Rohan",
+          "Project": "Project_3",
+          "date": "2024-03-13",
+          "totalAmount": 6000,
+          "advancedAmount": 2500,
+          "remainingAmount": 3500
+      },
+      {
+          "id": 4,
+          "name": "Tushar",
+          "Project": "Project_4",
+          "date": "2024-03-14",
+          "totalAmount": 7000,
+          "advancedAmount": 4000,
+          "remainingAmount": 3000
+      },
+      {
+          "id": 5,
+          "name": "Ankit",
+          "Project": "Project_5",
+          "date": "2024-03-15",
+          "totalAmount": 9000,
+          "advancedAmount": 3500,
+          "remainingAmount": 5500
+      }
   ]
 }
+
+    
+  
+  
+  
