@@ -82,7 +82,7 @@
 .heading{
     display: flex;
     width: 100%;
-    background-color: #CCD3CA;
+   
 }
 
 .block1{
@@ -103,12 +103,18 @@
     align-items: center;
    
 }
+
+.result tr :nth-child(1){
+    background-color: #CCD3CA;
+}
+
 .heading td{
     height: 50px;
     width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #CCD3CA;
 }
 
 .tbody{

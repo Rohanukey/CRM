@@ -10,7 +10,6 @@ function Header() {
   const admi = localStorage.getItem('ADMIN');
   const [admin, setAdmin] = useState(true);
   const [employee, setEmployee] = useState(true);
-  const [client, setClient] = useState(true);
   const Employee = localStorage.getItem('Employee');
   const Client = localStorage.getItem('Client');
 
@@ -22,10 +21,8 @@ function Header() {
     setNotLogin(true);
     setAdmin(true);
     setEmployee(true);
-    setClient(true);
     localStorage.removeItem("ADMIN");
     localStorage.removeItem("Employee");
-    localStorage.removeItem("Client");
   };
 
 
@@ -53,9 +50,6 @@ function Header() {
       setEmployee(false);
     }
 
-    else if (Client) {
-      setClient(false);
-    }
   }, [admi, Employee, Client]);
 
 
@@ -65,11 +59,8 @@ function Header() {
     <>
       <div className={Css.header}>
         <h1>CRM</h1>
-        {/*<Link to="/Home">Home</Link><br />*/}
         <Link className={admin ? Css.Display : ""} to="/Admin">Admin</Link><br />
         <Link className={employee ? Css.Display : ""} to="/EmployeePage">Employee</Link><br />
-        {/*<Link className={client ? Css.Display : ""} to="/ClientPage">Client</Link><br />
-         <Link to="/About">About</Link><br />*/}
         <button className={notlogin ? Css.Display : ""} onClick={handleLogout}>Log out</button>
       </div>
 

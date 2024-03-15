@@ -7,6 +7,7 @@
       "Email": "Sham007@gmail.com",
       "Password": "7894512365",
       "Address": "23, main street",
+      "isAdmin": false,
       "id": "10"
     },
     {
@@ -80,6 +81,26 @@
       "Password": "65464848452",
       "Address": "Koriea main street 7 ",
       "id": "4"
+    },
+    {
+      "id": "b804",
+      "Name": "Sham varma",
+      "UserName": "sham087",
+      "Number": "4512563987",
+      "Email": "titttttui2@GMAIL.com",
+      "Password": "65464848",
+      "Address": "78 main street",
+      "isAdmin": "on"
+    },
+    {
+      "Name": "tajus1",
+      "UserName": "RohanX77",
+      "Number": "4512563987",
+      "Email": "titttttui2@GMAIL.com",
+      "Password": "65464848",
+      "Address": "23, main street",
+      "isAdmin": false,
+      "id": "df32"
     }
   ],
   "BalanceSheets": [
@@ -151,7 +172,6 @@
       "pass": "123"
     }
   ],
-
   "Clients": [
     {
       "id": "c5",
@@ -274,38 +294,36 @@
       "Address": "india"
     }
   ],
-
-  "expenses":[
+  "expenses": [
     {
       "item": "Chairs",
       "date": "01/01/24",
-      "quantity" : 1,
+      "quantity": 1,
       "price": 10000
     },
     {
       "item": "Chairs",
       "date": "01/01/24",
-      "quantity" : 1,
+      "quantity": 1,
       "price": 10000
     },
     {
       "item": "Chairs",
       "date": "01/01/24",
-      "quantity" : 1,
+      "quantity": 1,
       "price": 10000
     },
     {
       "item": "Chairs",
       "date": "01/01/24",
-      "quantity" : 1,
+      "quantity": 1,
       "price": 10000
     },
     {
       "item": "Chairs",
       "date": "01/01/24",
-      "quantity" : 1,
+      "quantity": 1,
       "price": 10000
-    } 
-
+    }
   ]
 }
