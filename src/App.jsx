@@ -26,25 +26,22 @@ function App() {
     <>
 
       <BrowserRouter>
-
-          <Header />
-          <Routes>
-            <Route path="/" element={<Login />} />
-            <Route path="/Tracker" element={<Tracker />} />
-            <Route path="/Invoice" element={<Invoice />} />
-            <Route path="/Admin" element={<AdminPage />} />
-            {/* <Route path="/Admin" element={<ProtectedRoute Component={AdminPage} />} /> */}
-            <Route path="/EmployeePage" element={<ProtectedRoute Component={EmployeePage} />} />
-            <Route path="/Dashboard" element={<ProtectedRoute Component={Dashboard} />} />
-            <Route path="/UpdateForm/:id" element={<ProtectedRoute Component={UpdateForm} />} />
-            <Route path="/EmployeeTable/:id" element={<ProtectedRoute Component={EmployeeTable} />} />
-            <Route path="/Bar" element={<ProtectedRoute Component={Bar1} />} />
-            <Route path="/BalanceSheet" element={<ProtectedRoute Component={Balancesheet} />} />
-            <Route path="/ClientForm" element={<ProtectedRoute Component={ClientForm} />} />
-            {/*<Route path="/EmployeeDashboard" element={<ProtectedRoute Component={EmployeeDashboard} />} />*/}
-            <Route path="/EmployeeDashboard" element={<EmployeeDashboard/>}/>
-          </Routes>
-
+        <Header/>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/Tracker" element={<Tracker />} />
+          <Route path="/Invoice" element={<Invoice />} />
+          <Route path="/Admin" element={<ProtectedRoute Component={AdminPage} />} />
+          <Route path="/EmployeePage" element={<ProtectedRoute Component={EmployeePage} />} />
+          <Route path="/Dashboard" element={<ProtectedRoute Component={Dashboard} />} />
+          <Route path="/UpdateForm/:id" element={<ProtectedRoute Component={UpdateForm} />} />
+          <Route path="/EmployeeTable/:id" element={<ProtectedRoute Component={EmployeeTable} />} />
+          <Route path="/Bar" element={<ProtectedRoute Component={Bar1} />} />
+          <Route path="/BalanceSheet" element={<ProtectedRoute Component={Balancesheet} />} />
+          <Route path="/ClientForm" element={<ProtectedRoute Component={ClientForm} />} />
+          <Route path="/EmployeeDashboard" element={<ProtectedRoute Component={EmployeeDashboard} />} />
+          {/*<Route path="/EmployeeDashboard" element={<EmployeeDashboard/>}/>*/}
+        </Routes>
       </BrowserRouter>
 
     </>

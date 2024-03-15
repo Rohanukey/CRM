@@ -13,10 +13,7 @@
     justify-content: space-evenly;
     gap: 20px;
     height: auto;
-    padding: 10px;
 }
-
-
 
 .AdminPageWrapper h1{
     text-align: center;
