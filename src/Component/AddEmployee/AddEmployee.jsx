@@ -10,6 +10,7 @@ export default function AddEmployee({ onNavItemClick }) {
         Email: '',
         Password: '',
         Address: '',
+        isAdmin: false, // Add isAdmin field to inputs state
     });
     const [errors, setErrors] = useState({});
 
@@ -131,6 +132,14 @@ export default function AddEmployee({ onNavItemClick }) {
                     />
                     {errors.Address && <span className={Css.error}>{errors.Address}</span>}
                     <br />
+                    <div className={Css.admin}><label>Is Admin:</label>
+                        <input
+                            type="checkbox"
+                            name="isAdmin"
+                            checked={inputs.isAdmin}
+                            onChange={onhandleChange}
+                        />
+                    </div>
                     <div className={Css.btn}>
                         <button type="submit">Submit</button>
                         <button type="button" onClick={() => handleClick("EmployeeTable")}>Back</button>
