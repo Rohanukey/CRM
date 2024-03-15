@@ -7,7 +7,8 @@ import Dashboard from '../Dashboard/Dashboard';
 import UpdateForm from '../UpdateForm/UpdateForm';
 import EmployeeTable from '../EmployeeTable/EmployeeTable';
 import Balancesheet from '../Balancesheet/Balancesheet';
-import bars from "../../assets/react.svg"
+import bars from "../../assets/react.svg"  
+
 function AdminPage() {
 
   const [selectedComponent, setSelectedComponent] = useState('dashboard');
