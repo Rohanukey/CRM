@@ -26,7 +26,7 @@ function SignUp() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const userResponse = await axios.get('http://localhost:3000/user/');
+                const userResponse = await axios.get('http://localhost:3000/Employees/');
                 const signUpResponse = await axios.get('http://localhost:3000/signUp');
                 setUserData(userResponse.data);
                 setSignUpData(signUpResponse.data);
