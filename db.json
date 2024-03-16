@@ -1,11 +1,11 @@
 {
   "Employees": [
     {
-      "Name":"bharti",
-      "UserName":"Divya",
-      "Email":"b@gmail.com",
-      "Password":"Divya123"
-
+      "Name": "bharti",
+      "UserName": "Divya",
+      "Email": "b@gmail.com",
+      "Password": "Divya123",
+      "id": "4432"
     },
     {
       "Name": "True_shar",
@@ -43,15 +43,6 @@
       "Password": "65464848452",
       "Address": "Koriea main street 7 ",
       "id": "d6e4"
-    },
-    {
-      "Name": "Tushar ",
-      "UserName": "yuanX77",
-      "Number": "9856325647",
-      "Email": "Kapooor@456",
-      "Password": "65464848452",
-      "Address": "Koriea main street 7 ",
-      "id": "5"
     },
     {
       "Name": "Ram",
@@ -299,7 +290,6 @@
       "Remainingpay": "20,000",
       "date": "2024-03-12",
       "Address": "india"
-
     },
     {
       "id": "0657",
@@ -331,100 +321,98 @@
       "item": "Chairs",
       "date": "01/01/24",
       "quantity": 1,
-      "price": 10000
+      "price": 10000,
+      "id": "8f84"
     },
     {
       "item": "Chairs",
       "date": "01/01/24",
       "quantity": 1,
-      "price": 10000
+      "price": 10000,
+      "id": "b71e"
     },
     {
       "item": "Chairs",
       "date": "01/01/24",
       "quantity": 1,
-      "price": 10000
+      "price": 10000,
+      "id": "4454"
     },
     {
       "item": "Chairs",
       "date": "01/01/24",
       "quantity": 1,
-      "price": 10000
+      "price": 10000,
+      "id": "56e8"
     },
-
     {
-
       "item": "Chairs",
       "date": "01/01/24",
       "quantity": 1,
-      "price": 10000
-
-    } 
-
+      "price": 10000,
+      "id": "0f7d"
+    }
   ],
-  
-    "signUp": [
-      {
-        "username": "Bharti",
-        "password": "Zade"
-      }
-    ],
-    
-      "summary": [
-        { 
-          "budget": 10000 
-        }
-      ],
-      
-
-  "projects": [
-      {
-          "id": 1,
-          "name": "Divya",
-          "Project": "Project_1",
-          "date": "2024-03-11",
-          "totalAmount": 5000,
-          "advancedAmount": 2000,
-          "remainingAmount": 3000
-      },
-      {
-          "id": 2,
-          "name": "Bharti",
-          "Project": "Project_2",
-          "date": "2024-03-12",
-          "totalAmount": 8000,
-          "advancedAmount": 3000,
-          "remainingAmount": 5000
-      },
-      {
-          "id": 3,
-          "name": "Rohan",
-          "Project": "Project_3",
-          "date": "2024-03-13",
-          "totalAmount": 6000,
-          "advancedAmount": 2500,
-          "remainingAmount": 3500
-      },
-      {
-          "id": 4,
-          "name": "Tushar",
-          "Project": "Project_4",
-          "date": "2024-03-14",
-          "totalAmount": 7000,
-          "advancedAmount": 4000,
-          "remainingAmount": 3000
-      },
-      {
-          "id": 5,
-          "name": "Ankit",
-          "Project": "Project_5",
-          "date": "2024-03-15",
-          "totalAmount": 9000,
-          "advancedAmount": 3500,
-          "remainingAmount": 5500
-      },
+  "signUp": [
     {
-
+      "username": "Bharti",
+      "password": "Zade",
+      "id": "ef9c"
+    }
+  ],
+  "summary": [
+    {
+      "budget": 10000,
+      "id": "cdf7"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "name": "Divya",
+      "Project": "Project_1",
+      "date": "2024-03-11",
+      "totalAmount": 5000,
+      "advancedAmount": 2000,
+      "remainingAmount": 3000
+    },
+    {
+      "id": "2",
+      "name": "Bharti",
+      "Project": "Project_2",
+      "date": "2024-03-12",
+      "totalAmount": 8000,
+      "advancedAmount": 3000,
+      "remainingAmount": 5000
+    },
+    {
+      "id": "3",
+      "name": "Rohan",
+      "Project": "Project_3",
+      "date": "2024-03-13",
+      "totalAmount": 6000,
+      "advancedAmount": 2500,
+      "remainingAmount": 3500
+    },
+    {
+      "id": "4",
+      "name": "Tushar",
+      "Project": "Project_4",
+      "date": "2024-03-14",
+      "totalAmount": 7000,
+      "advancedAmount": 4000,
+      "remainingAmount": 3000
+    },
+    {
+      "id": "5",
+      "name": "Ankit",
+      "Project": "Project_5",
+      "date": "2024-03-15",
+      "totalAmount": 9000,
+      "advancedAmount": 3500,
+      "remainingAmount": 5500
+    },
+    {
       "id": "ffd8",
       "name": "silent boy rohan",
       "email": "Tushar@gmail.com",
@@ -438,8 +426,3 @@
     }
   ]
 }
-
-    
-  
-  
-  
