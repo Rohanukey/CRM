@@ -1,4 +1,4 @@
-.AddProductWrapper{
+.AddProductWrapper {
     width: 100%;
     min-height: 90vh;
     background-color: #DDDDDD;
@@ -9,7 +9,7 @@
     gap: 50px;
 }
 
-.Form{
+.Form {
     width: 100%;
     height: auto;
     display: flex;
@@ -17,12 +17,14 @@
     gap: 100px;
 }
 
-.RenderDiv{
+
+
+.RenderDiv {
     width: 100%;
     height: auto;
 }
 
-.btns{
+.btns {
     width: 100%;
     height: 100px;
     display: flex;
@@ -30,14 +32,14 @@
     align-items: center;
 }
 
-.btns button{
+.btns button {
     width: 100px;
     height: 30px;
-    border-radius: 5px ;
+    border-radius: 5px;
     border: none;
 }
 
-.Title{
+.Title {
     width: 100%;
     height: 100px;
     display: flex;
@@ -45,14 +47,25 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
+    font-family: inter;
 }
 
-.info{
+.Title h1 {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.Title h3 {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.info {
     width: 900px;
     height: 500px;
 }
 
-.ProductInfo{
+.ProductInfo {
     width: 900px;
     height: 400px;
     background-color: white;
@@ -60,64 +73,65 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-.Form input:focus{
+.Form input:focus {
     outline: none;
 }
 
-.ProductTitle{
+.ProductTitle {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.ProductTitle h3{
+.ProductTitle h3 {
     width: 95%;
     font-size: 24px;
 }
 
-.section1{
+.section1 {
     height: 100%;
     width: 50%;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 50px;
 }
 
-.sectionMain{
+.sectionMain {
     width: 100%;
     display: flex;
 }
 
-.section1 input,textarea{
+.section1 input,
+textarea {
     width: 90%;
 }
 
-.section1 input{
+.section1 input {
     height: 50px;
     border: none;
     border-bottom: 1px solid black;
 }
 
-.Description{
-    width:90%;
+.Description {
+    width: 90%;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.Description textarea{
+.Description textarea {
     width: 100%;
     height: 120px;
     border-radius: 5px;
 }
 
-.section2{
+.section2 {
     height: 100%;
     width: 50%;
     gap: 20px;
@@ -128,7 +142,7 @@
 }
 
 
-.section2 input{
+.section2 input {
     width: 90%;
     height: 50px;
     border: none;
@@ -136,29 +150,33 @@
 }
 
 
-.Category , .Sizes {
+.Category,
+.Sizes {
     width: 90%;
     display: flex;
     flex-direction: column;
     gap: 10px;
-} 
+}
 
-.Category select{
+.Category select {
     width: 100%;
     height: 50px;
     border: none;
     border-bottom: 1px solid black;
 }
-.Sizes select{
+
+
+.Sizes select {
     width: 100%;
     height: 50px;
     border: none;
     border-bottom: 1px solid black;
 }
+
 
 /*---------------Media ---------------------------*/
 
-.Media{
+.Media {
     width: 900px;
     height: 400px;
     background-color: white;
@@ -169,24 +187,26 @@
     gap: 30px;
 }
 
-.Media label , input {
+.Media label,
+input {
     width: 90%;
 }
+
 .Media h3 {
     width: 90%;
 }
 
-.Media h3{
+.Media h3 {
     font-size: 24px;
 }
 
-.Media label{
+.Media label {
     font-size: 20px;
 }
 
 /*--------------------------Social------------------------------*/
 
-.Social{
+.Social {
     width: 900px;
     height: 400px;
     border: 1px solid black;
@@ -198,17 +218,18 @@
     background-color: white;
 }
 
-.Social h3{
+.Social h3 {
     width: 90%;
     font-size: 24px;
 }
 
-.Social label , input{
+.Social label,
+input {
     width: 90%;
     height: 40px;
 }
 
-.Social input{
+.Social input {
     border: none;
     border-bottom: 1px solid black;
     background-color: transparent;
@@ -216,11 +237,11 @@
 
 /*-----------------Price--------------------------------*/
 
-.Price h3{
+.Price h3 {
     font-size: 24px;
 }
 
-.Price{
+.Price {
     background-color: white;
     width: 900px;
     height: 400px;
@@ -232,7 +253,7 @@
     gap: 20px;
 }
 
-.priceWrapper{
+.priceWrapper {
     width: 90%;
     height: auto;
     display: flex;
@@ -241,48 +262,55 @@
     align-items: flex-start;
 }
 
-.Pricing{
+.Pricing {
     width: 100%;
     height: auto;
     display: flex;
-    gap: 20px   ;
+    gap: 20px;
 }
 
-.Pricing input ,select{
+.Pricing input,
+select {
     width: 30%;
     border: none;
     border-bottom: 1px solid black;
     height: 50px;
 }
 
-.Tags{
+.Tags {
     width: 100%;
-    min-height:150px ;
+    min-height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.Tags select{
+.Tags select {
     width: 50%;
 }
 
-.priceWrapper input , select{
+.priceWrapper input,
+select {
     background-color: transparent;
 }
 
 /*------------------------------Navbar------------------------------------*/
 
-.NavWrapper{
-    width: 800px;
+.NavWrapper {
+    width: 900px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    background-color: #d81b60;
 }
 
-.NavWrapper li{
+.NavWrapper li {
     list-style: none;
     cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-family: inter;
+    font-weight: 300;
 }

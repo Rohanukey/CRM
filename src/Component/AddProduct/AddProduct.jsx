@@ -267,7 +267,7 @@ function Products() {
 
         return (
             <div className={Css.NavWrapper}>
-                <li onClick={() => handleComponentChange('ProductInfo')}>Product Info</li>
+                <li onClick={() => handleComponentChange('ProductInfo')}>Product INFO</li>
                 <li onClick={() => handleComponentChange('Media')}>Media</li>
                 <li onClick={() => handleComponentChange('Social')}>Socials</li>
                 <li onClick={() => handleComponentChange('Price')}>Pricing</li>

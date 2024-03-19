@@ -520,6 +520,24 @@
         "SKU": "",
         "Tags": ""
       }
+    },
+    {
+      "id": "f542",
+      "current": {
+        "Name": "",
+        "Description": "",
+        "Weight": "",
+        "Category": "",
+        "Sizes": "",
+        "File": "",
+        "FacebookHandle": "",
+        "ShoppifyHandle": "",
+        "InstagramAccount": "",
+        "Price": "",
+        "Currency": "",
+        "SKU": "",
+        "Tags": ""
+      }
     }
   ]
 }
