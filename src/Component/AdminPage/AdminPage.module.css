@@ -1,18 +1,20 @@
 .AdminPageWrapper{
     width: 80%;
     min-height: 94vh;
-    background-color: #CCD3CA;
-    background-color: #FFF6E9;
+    /* background-color: #CCD3CA;
+    background-color: #FFF6E9; */
     padding: 10px;
 }
 
 
 .pageContent{
     width: 100%;
+    min-height: 94.5vh;
     display: flex;
     justify-content: space-evenly;
     gap: 20px;
     height: auto;
+    background-color: #DDDDDD;
 }
 
 .AdminPageWrapper h1{

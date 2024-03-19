@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
+import React, { useState } from 'react'
 import Css from "./SideNav.module.css"
 import img1 from "../../assets/react.svg"
 
@@ -9,6 +9,27 @@ function SideNav({ onNavItemClick }) {
     const handleClick = (component) => {
         onNavItemClick(component);
     };
+
+    const [expand , setExpand] = useState(false)
+
+    const toggle = () => {
+        setExpand(prevState => !prevState);
+      };
+
+    const Products = ()=>{
+
+
+        return(
+            <div className={`${Css.ProductsWrapper} ${expand ? Css.full : ""}`}>
+                <ul>
+                <li>New Product</li>
+                <li>Edit Product</li>
+                <li>Product Page</li>
+                <li>Product List</li>
+                </ul>
+            </div>
+        )
+    }
 
     return (
         <>
@@ -33,6 +54,10 @@ function SideNav({ onNavItemClick }) {
                         <li onClick={() => handleClick('BalanceSheet')}><img src={img1} /><span>BalanceSheet</span></li>
                         <li onClick={() => handleClick('Tracker')}><img src={img1} /><span>Tracker</span></li>
                         <li onClick={() => handleClick('AddProduct')}><img src={img1} /><span>AddProduct</span></li>
+                        <li onClick={()=> toggle()}><img src={img1} /><span>Products</span></li>
+                        <Products/>
+                        
+                        
                         {/*<li onClick={() => handleClick('addEmployee')}><img src={img1} /><span>Add Employee</span></li>
     <li onClick={() => handleClick('UpdateForm')}><img src={img1} /><span>UpdateForm</span></li>*/}
                     </ul>
