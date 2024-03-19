@@ -9,6 +9,7 @@ import EmployeeTable from '../EmployeeTable/EmployeeTable';
 import Balancesheet from '../Balancesheet/Balancesheet';
 import bars from "../../assets/react.svg"  
 import Tracker from "../Tracker/Tracker"
+import AddProduct from "../AddProduct/AddProduct"
 
 function AdminPage() {
 
@@ -58,6 +59,8 @@ function AdminPage() {
         return <Balancesheet onNavItemClick={handleNavItemClick} />;
       case 'Tracker':
         return <Tracker onNavItemClick={handleNavItemClick} />;
+      case 'AddProduct':
+        return <AddProduct onNavItemClick={handleNavItemClick} />;
       default:
         return null;
     }

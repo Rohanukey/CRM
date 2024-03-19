@@ -424,5 +424,102 @@
       "date": "2024-03-07",
       "Address": "india"
     }
+  ],
+  "Products": [
+    {
+      "id": "75c2",
+      "current": {
+        "Name": "Rohan",
+        "Description": "this is a test",
+        "Weight": "70",
+        "Category": "Real Estate",
+        "Sizes": "Large",
+        "File": "C:\\fakepath\\bgF.png",
+        "FacebookHandle": "k",
+        "ShoppifyHandle": "",
+        "InstagramAccount": "",
+        "Price": "",
+        "Currency": "",
+        "SKU": "c",
+        "Tags": "",
+        "Instagram Account": "c"
+      }
+    },
+    {
+      "id": "553b",
+      "current": {
+        "Name": "",
+        "Description": "",
+        "Weight": "",
+        "Category": "",
+        "Sizes": "",
+        "File": "C:\\fakepath\\bgF.png",
+        "FacebookHandle": "",
+        "ShoppifyHandle": "",
+        "InstagramAccount": "",
+        "Price": "45165161561",
+        "Currency": "",
+        "SKU": "16545vsevsev",
+        "Tags": "",
+        "Instagram Account": "vsv",
+        "Shoppify Handle": "vseves"
+      }
+    },
+    {
+      "id": "7a3e",
+      "current": {
+        "Name": "Roha suraj ukey",
+        "Description": "make me some shirts",
+        "Weight": "100",
+        "Category": "",
+        "Sizes": "Medium",
+        "File": "C:\\fakepath\\Main_bg2.png",
+        "FacebookHandle": "fcack0012",
+        "ShoppifyHandle": "",
+        "InstagramAccount": "",
+        "Price": "450",
+        "Currency": "",
+        "SKU": "720",
+        "Tags": "",
+        "Shoppify Handle": "shop0012",
+        "Instagram Account": "insta0012"
+      }
+    },
+    {
+      "id": "391f",
+      "current": {
+        "Name": "",
+        "Description": "",
+        "Weight": "",
+        "Category": "electronics",
+        "Sizes": "",
+        "File": "",
+        "FacebookHandle": "",
+        "ShoppifyHandle": "",
+        "InstagramAccount": "",
+        "Price": "",
+        "Currency": "",
+        "SKU": "",
+        "Tags": ""
+      }
+    },
+    {
+      "id": "b3af",
+      "current": {
+        "Name": "",
+        "Description": "",
+        "Weight": "",
+        "Category": "",
+        "Sizes": "",
+        "File": "",
+        "FacebookHandle": "",
+        "ShoppifyHandle": "",
+        "InstagramAccount": "",
+        "Price": "",
+        "Currency": "",
+        "SKU": "",
+        "Tags": ""
+      }
+    }
   ]
 }
