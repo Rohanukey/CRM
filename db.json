@@ -538,6 +538,42 @@
         "SKU": "",
         "Tags": ""
       }
+    },
+    {
+      "id": "2f56",
+      "current": {
+        "Name": "",
+        "Description": "",
+        "Weight": "",
+        "Category": "",
+        "Sizes": "",
+        "File": "",
+        "FacebookHandle": "",
+        "ShoppifyHandle": "",
+        "InstagramAccount": "",
+        "Price": "",
+        "Currency": "",
+        "SKU": "",
+        "Tags": ""
+      }
+    },
+    {
+      "id": "7aba",
+      "current": {
+        "Name": "Minimal Bar Stool",
+        "Description": "The most beautiful curves of this swivel stool adds an elegant touch to any environment",
+        "Weight": "50",
+        "Category": "Furnitureg",
+        "Sizes": "Large",
+        "File": "C:\\fakepath\\Techgicus_logoF-removebg-preview.png",
+        "FacebookHandle": "Faceboob",
+        "ShoppifyHandle": "shopfy",
+        "InstagramAccount": "intsa",
+        "Price": "1419",
+        "Currency": "",
+        "SKU": "720",
+        "Tags": ""
+      }
     }
   ]
 }

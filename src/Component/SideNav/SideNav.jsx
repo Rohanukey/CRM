@@ -22,8 +22,8 @@ function SideNav({ onNavItemClick }) {
         return(
             <div className={`${Css.ProductsWrapper} ${expand ? Css.full : ""}`}>
                 <ul>
-                <li>New Product</li>
-                <li>Edit Product</li>
+                <li onClick={() => handleClick('AddProduct')}>New Product</li>
+                <li onClick={() => handleClick('EditProduct')}>Edit Product</li>
                 <li>Product Page</li>
                 <li>Product List</li>
                 </ul>

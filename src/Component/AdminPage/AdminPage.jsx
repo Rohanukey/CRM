@@ -10,6 +10,7 @@ import Balancesheet from '../Balancesheet/Balancesheet';
 import bars from "../../assets/react.svg"  
 import Tracker from "../Tracker/Tracker"
 import AddProduct from "../AddProduct/AddProduct"
+import EditProduct from "../EditProduct/EditProduct"
 
 function AdminPage() {
 
@@ -61,6 +62,8 @@ function AdminPage() {
         return <Tracker onNavItemClick={handleNavItemClick} />;
       case 'AddProduct':
         return <AddProduct onNavItemClick={handleNavItemClick} />;
+      case 'EditProduct':
+        return <EditProduct onNavItemClick={handleNavItemClick} />;
       default:
         return null;
     }

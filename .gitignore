@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 Assets_1
+store
 
 # Editor directories and files
 .vscode/*
@@ -23,3 +24,4 @@ Assets_1
 *.njsproj
 *.sln
 *.sw?
+
