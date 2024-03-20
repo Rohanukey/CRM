@@ -1,23 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
 
-.ContentWrapper{
+.ContentWrapper {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    overflow: scroll;
 }
 
 
-.table{
+.table {
     width: 100%;
     border-collapse: collapse;
-    border-spacing: 0; /* this removes space between cells */
-    /* border: 3px solid #387ADF; */
-
 }
 
-.tr{
+.tr {
     background-color: #8EACCD;
     height: 50px;
 }
@@ -25,12 +21,13 @@
 
 .tbody {
     background-color: #D2E0FB;
-    margin-bottom: 50px;
 }
 
 .tbody tr {
-    display: block; /* Change display to block */
-    margin-bottom: 20px; /* Add margin to create gap between rows */
+    display: block;
+    /* Change display to block */
+    margin-bottom: 20px;
+    /* Add margin to create gap between rows */
 }
 
 
@@ -45,10 +42,11 @@
     padding: 10px;
     font-family: inter;
     /* text-transform: capitalize; */
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 300;
     line-height: 20px;
-    
+    border: none;
+
 }
 
 .table thead {
@@ -58,30 +56,30 @@
 
 .tr th {
     /* border: 1px solid #387ADF; */
-    font-size: 16px;
+    font-size: 12px;
     width: 20px;
 }
 
-.btn{
+.btn {
     width: 120px;
     height: 35px;
     border-radius: 20px;
     border: none;
     cursor: pointer;
     background-color: #B5C0D0;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
 }
 
-.link{
-    
+.link {
+
     text-decoration: none;
     color: black;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 12px;
+    font-weight: 400
 }
 
-.Lbtn{
+.Lbtn {
     width: 120px;
     height: 35px;
     border-radius: 20px;
@@ -89,86 +87,83 @@
     border: none;
 }
 
-.searchInput{
+.searchInput {
     width: 600px;
     height: 50px;
     border: 3px solid #387ADF;
-    border-radius: 20px ;
+    border-radius: 20px;
+    z-index: 0;
 }
+
 .btn1 {
     width: 200px;
     height: 50px;
     border-radius: 40px;
     border: none;
-    background-color:#387ADF ;
+    background-color: #387ADF;
     color: white;
     font-size: 16px;
     font-weight: 400;
 }
 
-.btn1:hover{
+.btn1:hover {
     background-color: #404040;
     transition: .2s linear;
     cursor: pointer;
 }
 
-.options{
+.options {
     height: 50px;
     width: 100%;
     display: flex;
     gap: 50px;
 }
 
-.tbody :nth-child(1){
+.tbody :nth-child(1) {
     width: 80px;
 }
 
-@media (1023px < width < 1300px) {
-    /* .ContentWrapper{
+@media (770px < width < 1000px) {
+    .ContentWrapper{
+        overflow: scroll;
+    }
+}
+
+@media (480px < width < 770px) {
+
+    .ContentWrapper{
+        overflow: scroll;
+    }
+
+    .options {
+        height: 50px;
         width: 100%;
         display: flex;
-        flex-direction: column;
-        gap: 20px;
-    } */
+        justify-content: space-between;
+        gap: 10px;
+    }
 
-    /* .tbody td { */
-        /* border: 1px solid #387ADF; */
-        /* text-align: center;
-        min-height: 40px;
-        width: 100px;
-        word-wrap: break-word;
-        padding: 10px;
-        font-family: inter; */
-        /* text-transform: capitalize; */
-        /* font-size: 12px;
-        font-weight: 300;
-        line-height: 20px; */
-        
-    /* } */
-
-    /* .btn{
-        width: 120px;
-        height: 35px;
-        border-radius: 20px;
+    .btn1 {
+        width: 150px;
+        height: 50px;
+        border-radius: 40px;
         border: none;
-        cursor: pointer;
-        background-color: #B5C0D0;
+        background-color: #387ADF;
+        color: white;
         font-size: 12px;
         font-weight: 400;
     }
 
-    .link{
-    
-        text-decoration: none;
-        color: black;
-        font-size: 12px;
-        font-weight: 400;
+    /* .searchInput {
+        width: 300px;
+        height: 50px;
+        border: 3px solid #387ADF;
+        border-radius: 20px;
     } */
-    
-    /* .tr th { */
-        /* border: 1px solid #387ADF; */
-        /* width: 100px;
-        font-size: 12px; */
-    /* } */
 }
 
+@media (max-width: 480px) {
+    .ContentWrapper{
+        overflow: scroll;
+    }
+}

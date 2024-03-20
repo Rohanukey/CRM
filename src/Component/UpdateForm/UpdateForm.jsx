@@ -18,6 +18,7 @@ function UpdateForm({ onNavItemClick }) {
         Email: '',
         Password: '',
         Address: '',
+        isAdmin: false  , // Add isAdmin field to inputs state
     });
     const [errors, setErrors] = useState({});
 
@@ -142,6 +143,14 @@ function UpdateForm({ onNavItemClick }) {
                     />
                     {errors.Address && <span className={Css.error}>{errors.Address}</span>}
                     <br />
+                    <div className={Css.admin}><label>Is Admin:</label>
+                        <input
+                            type="checkbox"
+                            name="isAdmin"
+                            checked={inputs.isAdmin}
+                            onChange={onhandleChange}
+                        />
+                    </div>
                     <div className={Css.btns}>
                         <button type="submit">Submit</button>
                         <button type="button" onClick={() => navigate('/Admin')}>Back</button>                    

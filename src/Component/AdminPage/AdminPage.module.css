@@ -1,22 +1,21 @@
 .AdminPageWrapper{
     width: 80%;
     min-height: 94vh;
-    background-color: #CCD3CA;
-    background-color: #FFF6E9;
+    /* background-color: #CCD3CA;
+    background-color: #FFF6E9; */
     padding: 10px;
 }
 
 
 .pageContent{
     width: 100%;
+    min-height: 94.5vh;
     display: flex;
     justify-content: space-evenly;
     gap: 20px;
     height: auto;
-    padding: 10px;
+    background-color: #DDDDDD;
 }
-
-
 
 .AdminPageWrapper h1{
     text-align: center;
@@ -29,7 +28,7 @@
 }
 
 .ToggleNav{
-    width: 220px;
+    width: 240px;
     display: block;
 }
 

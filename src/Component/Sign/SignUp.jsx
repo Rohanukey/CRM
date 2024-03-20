@@ -1,4 +1,4 @@
-   
+
 
 
 import { useState, useEffect } from 'react';
@@ -26,7 +26,7 @@ function SignUp() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const userResponse = await axios.get('http://localhost:3000/user/');
+                const userResponse = await axios.get('http://localhost:3000/Employees/');
                 const signUpResponse = await axios.get('http://localhost:3000/signUp');
                 setUserData(userResponse.data);
                 setSignUpData(signUpResponse.data);
@@ -41,21 +41,23 @@ function SignUp() {
     const handleLogin = async (e) => {
         e.preventDefault(); // Prevent default form submission behavior
 
-       
+
         const userResult = userData.some((data) => (data.UserName === inputs.UserName && data.Password === inputs.Password));
         const signUpResult = signUpData.some((data) => (data.username === inputs.UserName && data.password === inputs.Password));
 
         if (userResult) {
             alert("User login successful");
             navigate("/EmployeeDashboard"); // Redirect to the User Dashboard
+            localStorage.setItem("login", true)
         } else if (signUpResult) {
             alert("Signup login successful");
             navigate("/Admin"); // Redirect to the Admin Dashboard
+            localStorage.setItem("login", true)
         } else {
             alert('User not found or password incorrect');
             // Handle the case when user is not found or password is incorrect
         }
-        
+
     };
 
     return (

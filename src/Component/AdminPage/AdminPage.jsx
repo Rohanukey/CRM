@@ -8,6 +8,9 @@ import UpdateForm from '../UpdateForm/UpdateForm';
 import EmployeeTable from '../EmployeeTable/EmployeeTable';
 import Balancesheet from '../Balancesheet/Balancesheet';
 import bars from "../../assets/react.svg"  
+import Tracker from "../Tracker/Tracker"
+import AddProduct from "../AddProduct/AddProduct"
+import EditProduct from "../EditProduct/EditProduct"
 
 function AdminPage() {
 
@@ -55,6 +58,12 @@ function AdminPage() {
         return <UpdateForm onNavItemClick={handleNavItemClick} />;
       case 'BalanceSheet':
         return <Balancesheet onNavItemClick={handleNavItemClick} />;
+      case 'Tracker':
+        return <Tracker onNavItemClick={handleNavItemClick} />;
+      case 'AddProduct':
+        return <AddProduct onNavItemClick={handleNavItemClick} />;
+      case 'EditProduct':
+        return <EditProduct onNavItemClick={handleNavItemClick} />;
       default:
         return null;
     }
