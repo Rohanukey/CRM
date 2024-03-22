@@ -1,30 +1,14 @@
 {
   "Employees": [
     {
-      "Name": "bharti",
-      "UserName": "Divya",
-      "Email": "b@gmail.com",
-      "Password": "Divya123",
-      "id": "4432"
-    },
-    {
-      "Name": "True_shar",
-      "UserName": "tush@4566",
-      "Number": "4946538888",
-      "Email": "Sham007@gmail.com",
-      "Password": "7894512365",
-      "Address": "23, main street",
-      "isAdmin": false,
-      "id": "10"
-    },
-    {
-      "id": "1d71",
-      "Name": "kpop sharma ",
+      "Name": "Kapil sharma ",
       "UserName": "Rohanrt7",
       "Number": "1235469870",
-      "Email": "Kapooor@456",
+      "Email": "KGapooor@456.com",
       "Password": "6546484812365",
-      "Address": "Koriea main street 7"
+      "Address": "Koriea main street 7",
+      "isAdmin": false,
+      "id": "1d71"
     },
     {
       "id": "2a17",
@@ -574,6 +558,38 @@
         "SKU": "720",
         "Tags": ""
       }
+    },
+    {
+      "id": "f242",
+      "Name": "",
+      "Description": "",
+      "Weight": "",
+      "Category": "",
+      "Sizes": "",
+      "File": "",
+      "FacebookHandle": "",
+      "ShoppifyHandle": "",
+      "InstagramAccount": "",
+      "Price": "",
+      "Currency": "",
+      "SKU": "",
+      "Tags": ""
+    },
+    {
+      "Name": "Toy story ",
+      "Description": "toy is updated",
+      "Weight": "100",
+      "Category": "others",
+      "Sizes": "Extra small",
+      "File": null,
+      "FacebookHandle": "Faceboob",
+      "ShoppifyHandle": "shopfy",
+      "InstagramAccount": "intsa",
+      "Price": "4512",
+      "Currency": "BTC",
+      "SKU": "720",
+      "Tags": "Sale",
+      "id": "c451"
     }
   ]
 }

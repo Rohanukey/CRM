@@ -7,15 +7,18 @@
     gap: 20px;
     border-radius: 20px;
     background-color: #387ADF;
-    background-color: #d81b60;
+    /* background-color: #d81b60; */
     position: sticky;
     top: 60px;
 
 }
 
 .SidenavWrapper hr {
+    height: 1px;
     width: 80%;
     margin: 0 auto;
+    background-color: black;
+    border: none;
     /* Center the <hr> horizontally */
 }
 
@@ -100,14 +103,14 @@
     display: none;
     height: 0;
     transition: all .2s ease-in-out;
-  }
-  
-  /* Define the expanded state */
-  .full {
+}
+
+/* Define the expanded state */
+.full {
     display: block;
     height: auto;
     transition: all .2s ease-in-out;
-  }
+}
 
 .ProductWrapper ul {
     width: 100%;
@@ -124,7 +127,7 @@
     display: flex;
     font-size: 16px;
     color: white;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 

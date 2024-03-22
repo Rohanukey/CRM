@@ -47,13 +47,15 @@ function EmployeeTable({ onNavItemClick }) {
             <div className={Css.ContentWrapper}>
                 <div className={Css.options}>
                     <button className={Css.btn1} onClick={() => handleClick('addEmployee')}>Add An Employee</button>
-                    <input
-                        type="text"
-                        placeholder="Search by Name, Email, or UserName"
-                        value={searchQuery}
-                        onChange={handleSearchChange}
-                        className={Css.searchInput}
-                    />
+                    <div className={Css.search}>
+                        <input
+                            type="text"
+                            placeholder="Search by Name, Email, or UserName"
+                            value={searchQuery}
+                            onChange={handleSearchChange}
+                            className={Css.searchInput}
+                        />
+                    </div>
                 </div>
 
                 <table className={Css.table}>
@@ -73,20 +75,18 @@ function EmployeeTable({ onNavItemClick }) {
                     <tbody>
                         {filteredData.map((item, index) => (
                             <tr key={item.id} className={Css.tbody}>
-                                <td>{index + 1}</td>
+                                <td className={Css.Num}>{index + 1}</td>
                                 <td>{item.Name}</td>
                                 <td>{item.Number}</td>
                                 <td>{item.Email}</td>
-                                <td>{item.Address}</td>
+                                <td className={Css.Address}>{item.Address}</td>
                                 <td>{item.UserName}</td>
                                 <td>{item.Password}</td>
-                                <td>
-                                    <button className={Css.Lbtn}>
-                                        <Link className={Css.link} to={`/UpdateForm/${item.id}`}>Update</Link>
-                                    </button>
+                                <td className={Css.actions}>
+                                    <Link className={Css.link} to={`/UpdateForm/${item.id}`}><img width="50" height="50" src="https://img.icons8.com/ios/50/pencil--v1.png" alt="pencil--v1" /></Link>
                                 </td>
-                                <td>
-                                    <button className={Css.btn} onClick={() => deletetask(item.id)}>Delete</button>
+                                <td className={Css.actions}>
+                                    <img className={Css.deletebtn} onClick={() => deletetask(item.id)} width="50" height="50" src="https://img.icons8.com/ios/50/delete-forever--v1.png" alt="delete-forever--v1" />
                                 </td>
                             </tr>
                         ))}

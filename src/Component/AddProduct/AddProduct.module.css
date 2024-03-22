@@ -47,8 +47,8 @@
     border-radius: 5px;
     border: none;
     color: white;
-    background-color: #d81b60;
-    /* background-color: #387ADF; */
+    /* background-color: #d81b60; */
+    background-color: #387ADF;
 }
 
 .Title {
@@ -120,11 +120,16 @@
     display: flex;
 }
 
-.section1 input,
-textarea {
+.section1 input{
     width: 90%;
     padding: 10px;
     font-size: 16px;
+}
+.section1 textarea {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    max-height: 150px;
 }
 
 .section1 input {
@@ -322,13 +327,13 @@ select {
     align-items: center;
     justify-content: space-evenly;
     /* border: 1px solid black; */
-    background-color: #d81b60;
-    /* background-color: #387ADF; */
+    /* background-color: #d81b60; */
+    background-color: #387ADF;
     position: absolute;
     top: -25px;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 10px ;
+    border-radius: 0.5rem;
     
 }
 

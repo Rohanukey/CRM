@@ -16,7 +16,7 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 10px;
 }
 
 .block1{
@@ -28,7 +28,7 @@
 
 .block2{
     width: 100%;
-    height: 350px;
+    height: 250px;
     display: flex;
     gap:20px;
 }
@@ -49,6 +49,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    cursor: pointer;
 }
 
 .btns button {
@@ -131,11 +132,17 @@
     display: flex;
 }
 
-.section1 input,
-textarea {
+.section1 input{
     width: 90%;
     padding: 10px;
     font-size: 16px;
+}
+
+.section1 textarea {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    max-height: 150px;
 }
 
 .section1 input {

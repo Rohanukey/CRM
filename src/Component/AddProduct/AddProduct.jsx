@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 import axios from "axios";
 import Css from "./AddProduct.module.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 function Products() {
 
@@ -31,7 +31,7 @@ function Products() {
 
         try {
 
-            await axios.post(url, inputsRef)
+            await axios.post(url, formData)
                 .then(response => (setApidata(response.data)))
         }
         catch (err) {
@@ -40,7 +40,7 @@ function Products() {
 
     }
 
-    const inputsRef = useRef({
+    const [formData, setFormData] = useState({
         Name: "",
         Description: "",
         Weight: "",
@@ -58,167 +58,8 @@ function Products() {
 
     const onhandleChange = (event) => {
         const { name, value } = event.target;
-        inputsRef.current[name] = value;
-        console.log(inputsRef)
-    };
-
-    const ProductInfo = () => {
-        return (
-            <div className={Css.ProductInfo}>
-                <div className={Css.ProductTitle}>
-                    <h3>Product Information</h3>
-                </div>
-                <div className={Css.sectionMain}>
-                    <div className={Css.section1}>
-                        <input
-                            name="Name"
-                            type="text"
-                            defaultValue={inputsRef.current.Name}
-                            placeholder="Name"
-                            onChange={onhandleChange}
-                        ></input>
-                        <div className={Css.Description}>
-                            <label>Description</label>
-                            <textarea
-                                name="Description"
-                                defaultValue={inputsRef.current.Description}
-                                placeholder="Description"
-                                onChange={onhandleChange}
-                            ></textarea>
-                        </div>
-                    </div>
-                    <div className={Css.section2}>
-                        <input
-                            type="number"
-                            name="Weight"
-                            defaultValue={inputsRef.current.Weight}
-                            placeholder="Weight"
-                            onChange={onhandleChange}
-                        ></input>
-                        <div className={Css.Category}>
-                            <label>Category</label>
-                            <select
-                                defaultValue={inputsRef.current.Category}
-                                name="Category"
-                                onChange={onhandleChange}
-                            >
-                                <option value={"Not_Set"}>Select_option</option>
-                                <option value={"clothing"}>clothing</option>
-                                <option value={"electronics"}>electronics</option>
-                                <option value={"Furnitureg"}>Furniture</option>
-                                <option value={"others"}>others</option>
-                                <option value={"Real Estate"}>Real Estate</option>
-                            </select>
-                        </div>
-                        <div className={Css.Sizes}>
-                            <label>Sizes</label>
-                            <select
-                                defaultValue={inputsRef.current.Sizes}
-                                name="Sizes"
-                                onChange={onhandleChange}
-                            >
-                                <option value={"Not_Set"}>Select_option</option>
-                                <option value={"Extra small"}>Extra small</option>
-                                <option value={"Extra largt"}>Extra large</option>
-                                <option value={"Large"}>Large</option>
-                                <option value={"Medium"}>Medium</option>
-                                <option value={"Small"}>Small</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    };
-
-    const Media = () => {
-        return (
-            <div className={Css.Media}>
-                <h3>Media</h3>
-                <label>Product images</label>
-                <input
-                    type="file"
-                    name="File"
-                    defaultValue={inputsRef.current.File}
-                    onChange={onhandleChange}
-                ></input>
-            </div>
-        );
-    };
-
-    const Social = () => {
-        return (
-            <div className={Css.Social}>
-                <h3>Social</h3>
-                <input
-                    name="FacebookHandle"
-                    type="text"
-                    defaultValue={inputsRef.current.FacebookHandle}
-                    placeholder="FacebookHandle"
-                    onChange={onhandleChange}
-                ></input>{" "}
-                <input
-                    name="ShoppifyHandle"
-                    type="text"
-                    defaultValue={inputsRef.current.ShoppifyHandle}
-                    placeholder="ShoppifyHandle"
-                    onChange={onhandleChange}
-                ></input>{" "}
-                <input
-                    name="InstagramAccount"
-                    type="text"
-                    defaultValue={inputsRef.current.InstagramAccount}
-                    placeholder="InstagramAccount"
-                    onChange={onhandleChange}
-                ></input>
-            </div>
-        );
-    };
-
-    const Price = () => {
-        return (
-            <div className={Css.Price}>
-                <div className={Css.priceWrapper}>
-                    <h3>Pricing</h3>
-                    <div className={Css.Pricing}>
-                        <input
-                            name="Price"
-                            type="number"
-                            defaultValue={inputsRef.current.Price}
-                            placeholder="Price"
-                            onChange={onhandleChange}
-                        ></input>
-                        <select defaultValue={inputsRef.current.Currency} name="Currency">
-                            <option value={"Not selected"}>select option</option>
-                            <option value={"USD"}>USD</option>
-                            <option value={"BTC"}>BTC</option>
-                            <option value={"CNY"}>CNY</option>
-                            <option value={"EUR"}>EUR</option>
-                            <option value={"GBP"}>GBP</option>
-                            <option value={"INR"}>INR</option>
-                        </select>
-                        <input
-                            name="SKU"
-                            type="text"
-                            defaultValue={inputsRef.current.SKU}
-                            placeholder="SKU"
-                            onChange={onhandleChange}
-                        ></input>
-                    </div>
-                    <div className={Css.Tags}>
-                        <label>Tags</label>
-                        <select defaultValue={inputsRef.current.Tags} name="Tags">
-                            <option value={"Not selected"}>select option</option>
-                            <option value={"In Stock"}>In Stock</option>
-                            <option value={"Black Friday"}>Black Friday</option>
-                            <option value={"Sale"}>Sale</option>
-                            <option value={"Out of Stock"}>Out of Stock</option>
-                            <option value={"Expired"}>Expired</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        );
+        setFormData((values) => ({ ...values, [name]: value }));
+        console.log(formData)
     };
 
     const [currentStep, setCurrentStep] = useState(0);
@@ -255,15 +96,12 @@ function Products() {
         }
     };
 
-    const steps = [
-        <ProductInfo />,
-        <Media />,
-        <Social />,
-        <Price />,
-    ];
+    const renderStyles = {
+        display: "none",
+    };
 
 
-    const Navmenu = () => {     
+    const Navmenu = () => {
 
         return (
             <div className={Css.NavWrapper}>
@@ -286,11 +124,159 @@ function Products() {
                     <form className={Css.Form} onSubmit={handleSubmit}>
                         <div className={Css.RenderDiv}>
                             <Navmenu />
-                            {steps[currentStep]}
+                            <div className={Css.RenderObj}>
+                                <div className={Css.RenderObj} style={currentStep === 0 ? { ...renderStyles, display: "block" } : renderStyles}>
+                                    <div className={Css.ProductInfo}>
+                                        <div className={Css.ProductTitle}>
+                                            <h3>Product Information</h3>
+                                        </div>
+                                        <div className={Css.sectionMain}>
+                                            <div className={Css.section1}>
+                                                <input
+                                                    name="Name"
+                                                    type="text"
+                                                    value={formData.Name}
+                                                    placeholder="Name"
+                                                    onChange={onhandleChange}
+                                                ></input>
+                                                <div className={Css.Description}>
+                                                    <label>Description</label>
+                                                    <textarea
+                                                        name="Description"
+                                                        value={formData.Description}
+                                                        placeholder="Description"
+                                                        onChange={onhandleChange}
+                                                    ></textarea>
+                                                </div>
+                                            </div>
+                                            <div className={Css.section2}>
+                                                <input
+                                                    type="number"
+                                                    name="Weight"
+                                                    value={formData.Weight}
+                                                    placeholder="Weight"
+                                                    onChange={onhandleChange}
+                                                ></input>
+                                                <div className={Css.Category}>
+                                                    <label>Category</label>
+                                                    <select
+                                                        value={formData.Category}
+                                                        name="Category"
+                                                        onChange={onhandleChange}
+                                                    >
+                                                        <option value={"Not_Set"}>Select_option</option>
+                                                        <option value={"clothing"}>clothing</option>
+                                                        <option value={"electronics"}>electronics</option>
+                                                        <option value={"Furnitureg"}>Furniture</option>
+                                                        <option value={"others"}>others</option>
+                                                        <option value={"Real Estate"}>Real Estate</option>
+                                                    </select>
+                                                </div>
+                                                <div className={Css.Sizes}>
+                                                    <label>Sizes</label>
+                                                    <select
+                                                        value={formData.Sizes}
+                                                        name="Sizes"
+                                                        onChange={onhandleChange}
+                                                    >
+                                                        <option value={"Not_Set"}>Select_option</option>
+                                                        <option value={"Extra small"}>Extra small</option>
+                                                        <option value={"Extra largt"}>Extra large</option>
+                                                        <option value={"Large"}>Large</option>
+                                                        <option value={"Medium"}>Medium</option>
+                                                        <option value={"Small"}>Small</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={Css.RenderObj} style={currentStep === 1 ? { ...renderStyles, display: "block" } : renderStyles}>
+                                    <div className={Css.Media}>
+                                        <h3>Media</h3>
+                                        <label>Product images</label>
+                                        <input
+                                            type="file"
+                                            name="File"
+                                            value={formData.File}
+                                            onChange={onhandleChange}
+                                        ></input>
+                                    </div>
+                                </div>
+                                <div className={Css.RenderObj} style={currentStep === 2 ? { ...renderStyles, display: "block" } : renderStyles}>
+                                    <div className={Css.Social}>
+                                        <h3>Social</h3>
+                                        <input
+                                            name="FacebookHandle"
+                                            type="text"
+                                            value={formData.FacebookHandle}
+                                            placeholder="FacebookHandle"
+                                            onChange={onhandleChange}
+                                        ></input>{" "}
+                                        <input
+                                            name="ShoppifyHandle"
+                                            type="text"
+                                            value={formData.ShoppifyHandle}
+                                            placeholder="ShoppifyHandle"
+                                            onChange={onhandleChange}
+                                        ></input>{" "}
+                                        <input
+                                            name="InstagramAccount"
+                                            type="text"
+                                            value={formData.InstagramAccount}
+                                            placeholder="InstagramAccount"
+                                            onChange={onhandleChange}
+                                        ></input>
+                                    </div>
+                                </div>
+                                <div className={Css.RenderObj} style={currentStep === 3 ? { ...renderStyles, display: "block" } : renderStyles}>
+                                    <div className={Css.Price}>
+                                        <div className={Css.priceWrapper}>
+                                            <h3>Pricing</h3>
+                                            <div className={Css.Pricing}>
+                                                <input
+                                                    name="Price"
+                                                    type="number"
+                                                    value={formData.Price}
+                                                    placeholder="Price"
+                                                    onChange={onhandleChange}
+                                                ></input>
+                                                <select value={formData.Currency} name="Currency" onChange={onhandleChange}>
+                                                    <option value={"Not selected"}>select option</option>
+                                                    <option value={"USD"}>USD</option>
+                                                    <option value={"BTC"}>BTC</option>
+                                                    <option value={"CNY"}>CNY</option>
+                                                    <option value={"EUR"}>EUR</option>
+                                                    <option value={"GBP"}>GBP</option>
+                                                    <option value={"INR"}>INR</option>
+                                                </select>
+                                                <input
+                                                    name="SKU"
+                                                    type="text"
+                                                    value={formData.SKU}
+                                                    placeholder="SKU"
+                                                    onChange={onhandleChange}
+                                                ></input>
+                                            </div>
+                                            <div className={Css.Tags}>
+                                                <label>Tags</label>
+                                                <select value={formData.Tags} name="Tags" onChange={onhandleChange}>
+                                                    <option value={"Not selected"}>select option</option>
+                                                    <option value={"In Stock"}>In Stock</option>
+                                                    <option value={"Black Friday"}>Black Friday</option>
+                                                    <option value={"Sale"}>Sale</option>
+                                                    <option value={"Out of Stock"}>Out of Stock</option>
+                                                    <option value={"Expired"}>Expired</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div className={Css.btns}>
                                 {currentStep > 0 && <button type="button" onClick={handlePrev}>Prev</button>}
-                                {currentStep < steps.length - 1 && <button type="button" onClick={handleNext}>Next</button>}
-                                {currentStep === steps.length - 1 && <button type="submit">Submit</button>}
+                                {currentStep < 4 - 1 && <button type="button" onClick={handleNext}>Next</button>}
+                                {currentStep === 4 - 1 && <button type="submit">Submit</button>}
                             </div>
                         </div>
                     </form>

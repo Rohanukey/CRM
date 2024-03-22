@@ -36,16 +36,15 @@
 .tbody td {
     /* border: 1px solid #387ADF; */
     text-align: center;
-    min-height: 40px;
-    min-width: 100px;
+    height: 40px;
     word-wrap: break-word;
-    padding: 10px;
     font-family: inter;
     /* text-transform: capitalize; */
     font-size: 12px;
     font-weight: 300;
     line-height: 20px;
     border: none;
+    border-bottom: .5px solid rgba(128, 128, 128, 0.099);
 
 }
 
@@ -71,28 +70,55 @@
     font-weight: 400;
 }
 
-.link {
+.deletebtn {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
 
+.link {
     text-decoration: none;
     color: black;
     font-size: 12px;
-    font-weight: 400
+    font-weight: 400;
+    height: 20px
 }
 
 .Lbtn {
-    width: 120px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     border-radius: 20px;
-    background-color: #B5C0D0;
+    background-color: transparent;
     border: none;
 }
 
+.Address {
+    max-width: 150px;
+}
+
+.Num {
+    max-width: 80px;
+}
+
+.actions {
+    width: 80px;
+}
+
+.actions img {
+    width: 20px;
+    height: 20px;
+}
+
+
 .searchInput {
-    width: 600px;
-    height: 50px;
-    border: 3px solid #387ADF;
-    border-radius: 20px;
-    z-index: 0;
+    width: 550px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+}
+
+.searchInput:focus{
+    outline: none;
 }
 
 .btn1 {
@@ -105,6 +131,18 @@
     font-size: 16px;
     font-weight: 400;
 }
+
+.search {
+    height: 50px;   
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #387ADF;
+    border-radius: 20px;
+    z-index: 0;
+}
+
 
 .btn1:hover {
     background-color: #404040;
@@ -119,19 +157,19 @@
     gap: 50px;
 }
 
-.tbody :nth-child(1) {
-    width: 80px;
+.options ::placeholder {
+    padding-left: 20px;
 }
 
 @media (770px < width < 1000px) {
-    .ContentWrapper{
+    .ContentWrapper {
         overflow: scroll;
     }
 }
 
 @media (480px < width < 770px) {
 
-    .ContentWrapper{
+    .ContentWrapper {
         overflow: scroll;
     }
 
@@ -153,17 +191,10 @@
         font-size: 12px;
         font-weight: 400;
     }
-
-    /* .searchInput {
-        width: 300px;
-        height: 50px;
-        border: 3px solid #387ADF;
-        border-radius: 20px;
-    } */
 }
 
 @media (max-width: 480px) {
-    .ContentWrapper{
+    .ContentWrapper {
         overflow: scroll;
     }
 }
