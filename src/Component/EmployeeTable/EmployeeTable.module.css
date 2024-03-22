@@ -5,7 +5,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    overflow: scroll;
 }
 
 
@@ -43,7 +42,7 @@
     padding: 10px;
     font-family: inter;
     /* text-transform: capitalize; */
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 300;
     line-height: 20px;
     border: none;
@@ -57,7 +56,7 @@
 
 .tr th {
     /* border: 1px solid #387ADF; */
-    font-size: 16px;
+    font-size: 12px;
     width: 20px;
 }
 
@@ -68,7 +67,7 @@
     border: none;
     cursor: pointer;
     background-color: #B5C0D0;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
 }
 
@@ -76,7 +75,7 @@
 
     text-decoration: none;
     color: black;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400
 }
 
@@ -124,7 +123,17 @@
     width: 80px;
 }
 
+@media (770px < width < 1000px) {
+    .ContentWrapper{
+        overflow: scroll;
+    }
+}
+
 @media (480px < width < 770px) {
+
+    .ContentWrapper{
+        overflow: scroll;
+    }
 
     .options {
         height: 50px;
@@ -151,4 +160,10 @@
         border: 3px solid #387ADF;
         border-radius: 20px;
     } */
+}
+
+@media (max-width: 480px) {
+    .ContentWrapper{
+        overflow: scroll;
+    }
 }

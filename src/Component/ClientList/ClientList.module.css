@@ -18,7 +18,7 @@
     border: 1px solid black;
 }
 
-tr th {
+.clientlistWrapper tr th {
     border: 1px solid black;
     height: 50px;
     width: 300px;
@@ -29,7 +29,7 @@ tr th {
     background:#8EACCD;
 }
 
-tr td {
+.clientlistWrapper tr td {
     border: 1px solid black;
 }
 

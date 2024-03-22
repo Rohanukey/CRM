@@ -40,15 +40,16 @@ function Header() {
 
 
   useEffect(() => {
-    if (admi) {
+    if (login) {
 
       setAdmin(false);
-
-    }
-
-    else if (Employee) {
       setEmployee(false);
+
     }
+
+    // else if (login) {
+    //   setEmployee(false);
+    // }
 
   }, [admi, Employee, Client]);
 
@@ -60,7 +61,7 @@ function Header() {
       <div className={Css.header}>
         <h1>CRM</h1>
         <Link className={admin ? Css.Display : ""} to="/Admin">Admin</Link><br />
-        <Link className={employee ? Css.Display : ""} to="/EmployeePage">Employee</Link><br />
+        <Link className={employee ? Css.Display : ""} to="/EmployeeDashboard">Employee</Link><br />
         <button className={notlogin ? Css.Display : ""} onClick={handleLogout}>Log out</button>
       </div>
 
