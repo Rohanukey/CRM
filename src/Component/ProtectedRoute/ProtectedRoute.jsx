@@ -9,12 +9,13 @@ function ProtectedRoute(props) {
   const { Component } = props
   const navigate = useNavigate()
   const [loading, setLoading] = useState(true); // Add loading state
+  
 
   useEffect(() => {
     const login = localStorage.getItem("login")
 
     if (!login) {
-      navigate("/");
+      navigate("/"); 
     }
     else {
       setLoading(false); // Mark loading as false after checking authentication
@@ -25,7 +26,7 @@ function ProtectedRoute(props) {
     return null; // Render nothing or loading indicator while checking authentication
   }
 
-  return (
+  return ( 
 
 
 
