@@ -28,7 +28,7 @@ function SideNav({ onNavItemClick }) {
                 <li onClick={() => {handleClick('AddProduct') }} className={`${active === "AddProduct" ? Css.active : "" }`}><span>N</span>New Product</li>
                 <li onClick={() => {handleClick('EditProduct') }} className={`${active === "EditProduct" ? Css.active : "" }`}><span>E</span>Edit Product</li>
                 <li onClick={() => {handleClick('ProductPage') }} className={`${active === "ProductPage" ? Css.active : "" }`}><span>P</span>Product Page</li>
-                <li onClick={() => {handleClick('ProductList') }} className={`${active === "ProductList" ? Css.active : "" }`}><span>P</span>Product List</li>
+                <li onClick={() => {handleClick('Productlist') }} className={`${active === "ProductList" ? Css.active : "" }`}><span>P</span>Product List</li>
                 </ul>
             </div>
         )
