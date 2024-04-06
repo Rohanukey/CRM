@@ -13,6 +13,7 @@ dist-ssr
 *.local
 Assets_1
 store
+speech.jsx
 
 # Editor directories and files
 .vscode/*

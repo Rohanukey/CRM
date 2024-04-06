@@ -11,6 +11,8 @@ import bars from "../../assets/react.svg"
 import Tracker from "../Tracker/Tracker"
 import AddProduct from "../AddProduct/AddProduct"
 import EditProduct from "../EditProduct/EditProduct"
+import ProductPage from "../"
+import Productlist from "../EditProduct/EditProduct"
 
 function AdminPage() {
 
@@ -63,6 +65,10 @@ function AdminPage() {
       case 'AddProduct':
         return <AddProduct onNavItemClick={handleNavItemClick} />;
       case 'EditProduct':
+        return <EditProduct onNavItemClick={handleNavItemClick} />;
+      case 'ProductPage':
+        return <EditProduct onNavItemClick={handleNavItemClick} />;
+      case 'Productlist':
         return <EditProduct onNavItemClick={handleNavItemClick} />;
       default:
         return null;

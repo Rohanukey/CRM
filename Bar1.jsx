@@ -6,7 +6,7 @@ function Bar1() {
     return (
         <>
 
-            <div style={{ width: 400, height: 300}} >
+            <div style={{ width: 380, height: 300}} >
                 <Line
                     data={{
                         labels: ["A", "B", "C" , "D" , "E" , "F" , "G" ],

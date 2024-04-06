@@ -26,7 +26,7 @@ function App() {
     <>
 
       <BrowserRouter>
-        <Header/>
+        <Header />
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/Tracker" element={<Tracker />} />

@@ -42,6 +42,8 @@ function EmployeeTable({ onNavItemClick }) {
             .catch((error) => console.error('Error deleting', error));
     };
 
+    
+
     return (
         <>
             <div className={Css.ContentWrapper}>
