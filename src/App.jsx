@@ -16,6 +16,9 @@ import ClientForm from "./Component/ClientForm/ClientForm"
 import ClientList from "./Component/ClientList/ClientList"
 import Bar1 from "../Bar1"
 import Balancesheet from "./Component/Balancesheet/Balancesheet"
+import ProductList from "./Component/ProductList/ProductList"
+import ProductPage from "./Component/ProductPage/ProductPage"
+import EditProduct from "./Component/EditProduct/EditProduct"
 
 
 
@@ -29,6 +32,12 @@ function App() {
         <Header/>
         <Routes>
           <Route path="/" element={<Login />} />
+          {/* <Route path="/ProductPage/:id" element={<ProductPage/>} />
+        <Route path="/ProductList" element={<ProductList/>} /> */}
+        <Route path="/EditProduct" element={<EditProduct/>} />
+          
+          <Route path="/ProductPage/:id" element={<ProductPage />} />
+          <Route path="/ProductList" element={<ProductList />} />
           <Route path="/Tracker" element={<Tracker />} />
           <Route path="/Invoice" element={<Invoice />} />
           <Route path="/Admin" element={<ProtectedRoute Component={AdminPage} />} />

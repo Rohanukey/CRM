@@ -78,7 +78,7 @@ function SignUp() {
                 </div>
                 <div className={styles.inputGroup}>
                     <label>Password</label>
-                    <input
+                    <input  
                         className={styles.inputField}
                         type="password"
                         name='Password'

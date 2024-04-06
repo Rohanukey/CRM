@@ -1,0 +1,149 @@
+
+
+.productcontainer {
+    display: flex;
+    
+    width: 100%;
+    height: auto;
+    color: rgb(58, 60, 61);
+    
+    
+  }
+  
+  .bigimage {
+    margin-bottom: 10px;
+    width:90%;
+    height: 600px;
+
+    border-radius: 20px;
+  }
+  
+  
+
+  .smallimages img {
+    width: 10px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 20px; 
+  }
+  
+  .smallimages {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .smallimages img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px; 
+  }
+  /* .description {
+    
+    
+    width: 450px;
+    font-size: 20px;
+  
+    
+  } */
+  .imagecontainer{
+    width: 50%;
+  }
+  .addbutton{
+    width: 150px;
+    height: 50px;
+    background-color: rgb(197, 24, 116);
+    font-size: 10px;
+    border-radius: 20px;
+    margin-right: 90px;
+    justify-content: center;
+    
+   
+    
+    margin-top: 10px;
+  }
+  .optioncontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .Options {
+    flex: 1;
+    margin-right: 10px;
+    text-align: center;
+  }
+ 
+  .Options input{
+    width: 100px;
+    height: 50px;
+    
+    border: none;
+    border-color: black;
+    font-size: 15px;
+    margin-bottom: 10px;
+
+  }
+  .description{
+    width: 400px;
+    height: 400px;
+    
+    background-color:hsl(260, 18%, 97%);
+    
+    justify-content: space-between;
+    font-size: 18px;
+    
+   
+   
+  
+    margin-top: 30px;
+   
+    border-radius: 10px;
+    justify-content: center;
+  
+
+  }
+  .info{
+    margin-top: 40px;
+    margin-left: 90px;
+    
+  }
+.desheading{
+  text-align: center;
+  margin-top: 20px;
+  
+}
+.status{
+  background-color:#bce2be;
+  width:190px;
+  height:30px;
+  margin-top: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: #339537;
+  /* color: aliceblue; */
+}
+.addcard{
+  width : 240px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #e91e63;
+  margin-top: 100px;
+  color: white;
+  font-size: 20px;
+  
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+  
