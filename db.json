@@ -413,26 +413,19 @@
     {
       "id": "75c2",
       "current": {
-        "Name": "Rohan",
-        "Description": "this is a test",
-        "Weight": "70",
-        "Category": "Real Estate",
-        "Sizes": "Large",
+        "Category": "Rohan",
+        "Price": "this is a test",
+        "SKU": "70",
+        "Quantity": "Large",
         "File": "C:\\fakepath\\bgF.png",
-        "FacebookHandle": "k",
-        "ShoppifyHandle": "",
-        "InstagramAccount": "",
-        "Price": "",
-        "Currency": "",
-        "SKU": "c",
-        "Tags": "",
-        "Instagram Account": "c"
+        "status": "k",
+        "Action": " delete"
       }
     },
     {
       "id": "553b",
       "current": {
-        "Name": "",
+        "Name": "Flipcart",
         "Description": "",
         "Weight": "",
         "Category": "",
@@ -472,7 +465,7 @@
     {
       "id": "391f",
       "current": {
-        "Name": "",
+        "Name": "Ajio",
         "Description": "",
         "Weight": "",
         "Category": "electronics",
@@ -490,7 +483,7 @@
     {
       "id": "b3af",
       "current": {
-        "Name": "",
+        "Name": "Amazon",
         "Description": "",
         "Weight": "",
         "Category": "",
@@ -508,7 +501,7 @@
     {
       "id": "f542",
       "current": {
-        "Name": "",
+        "Name": " mynta",
         "Description": "",
         "Weight": "",
         "Category": "",
@@ -526,7 +519,7 @@
     {
       "id": "2f56",
       "current": {
-        "Name": "",
+        "Name": " Facebook",
         "Description": "",
         "Weight": "",
         "Category": "",
@@ -590,6 +583,68 @@
       "SKU": "720",
       "Tags": "Sale",
       "id": "c451"
+    }
+  ],
+  "ProductList": [
+    {
+      "id": "7a3e",
+      "Category": "chair",
+      "Price": "965",
+      "SKU": "706987465",
+      "Quantity": "8",
+      "imagePath": "assets/chair.png",
+      "status": " In Stock",
+      "Action": " delete"
+    },
+    {
+      "id": "391f",
+      "Category": "tshirt",
+      "Price": "465",
+      "SKU": "70",
+      "Quantity": "987",
+      "imagePath": "assets/chair.png",
+      "status": " In Stock",
+      "Action": " delete"
+    },
+    {
+      "id": "b3af",
+      "Category": "tshirt",
+      "Price": "this is a test",
+      "SKU": "70",
+      "Quantity": "Large",
+      "imagePath": "assets/chair.png",
+      "status": "In Stock",
+      "Action": " delete"
+    },
+    {
+      "id": "f542",
+      "Category": "chair",
+      "Price": "this is a test",
+      "SKU": "70",
+      "Quantity": "Large",
+      "imagePath": "assets/chair.png",
+      "status": "In Stock",
+      "Action": " delete"
+    },
+    {
+      "id": "2f56",
+      "Category": "shoose",
+      "Price": "this is a test",
+      "SKU": "70",
+      "Quantity": "Large",
+      "imagePath": "assets/chair.png",
+      "status": "In Stock",
+      "Action": " delete"
+    },
+    {
+      "id": "7aba",
+      "Category": "shoose",
+      "Price": "this is a test",
+      "SKU": "70",
+      "Quantity": "Large",
+      "imagePath": "assets/chair.png",
+      "status": "In Stock",
+      "Action": " delete"
     }
   ]
 }
